@@ -33,12 +33,10 @@
     /* ****** End ****** */
 
     /********* Start My_social *******/
-        // Start My_social
         let My_social = document.querySelector('.My_social');
         My_social.addEventListener('click',function(){
             My_social.classList.toggle('active');
         });
-        // End navigation
     /* ****** End ****** */
 /* ****************** End Header ****************** */
 
