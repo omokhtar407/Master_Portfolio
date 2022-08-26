@@ -37,6 +37,7 @@
         My_social.addEventListener('click',function(){
             My_social.classList.toggle('active');
         });
+
     /* ****** End ****** */
 /* ****************** End Header ****************** */
 
@@ -53,6 +54,7 @@
             let html = document.querySelector('.html'),
                 css = document.querySelector('.css'),
                 js = document.querySelector('.js'),
+                ts = document.querySelector('.ts'),
                 Jquery = document.querySelector('.Jquery'),
                 bootstrab = document.querySelector('.bootstrab'),
                 Angular = document.querySelector('.Angular'),
@@ -80,6 +82,14 @@
 
                 new EasyPieChart(js, {
                     barColor:'#ffc107',
+                    lineWidth:10,
+                    trackColor:'#000',
+                    trackWidth:10,
+                    lineCap:'round'
+                });
+
+                new EasyPieChart(ts, {
+                    barColor:'#0d60ff',
                     lineWidth:10,
                     trackColor:'#000',
                     trackWidth:10,
@@ -180,22 +190,23 @@
                 currentIndex = 0 ;
             }
             let imgSrc = imgs[currentIndex].getAttribute('src');
-            console.log(imgSrc)
             SelectedImg.setAttribute('src',imgSrc);
         }
         
+        function closeSlider(){
+            document.querySelector('.modal').style.cssText = 'transform: translate(0,-50)';
+            document.querySelector('.modal-backdrop.show').remove();   
+            document.body.style.cssText = 'overflow : auto !important';
+        }
+
         nextButton.addEventListener('click',function(){
-            slide(-1);
+            slide(1);
         });
         
         prevButton.addEventListener('click',function(){
             slide(-1);
         });
         
-        // closeButton.addEventListener('click',function(){
-        //     document.body.style.overflow = `auto !important`;
-        // });
-
         document.addEventListener('keydown',function(e){
             if(e.key == "ArrowRight"){
                 slide(1);
@@ -203,7 +214,9 @@
             else if(e.key == "ArrowLeft"){
                 slide(-1);
             }
-            // else if(e.key == "Escape"){}
+            else if(e.key == "Escape"){
+                closeSlider();
+            }
         })
     /* ****** End ****** */
 

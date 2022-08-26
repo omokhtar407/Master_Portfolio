@@ -1,675 +1,878 @@
+
 :root {
-  --main_color: #f15824;
-  --secondary_color:#f67f1d;
-  --white_color: #fff;
-  --black_color: #000;
-  --black_50_color:#0d0c0c;
-  --font_family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  --font_family_sec:'Kaushan Script', cursive;
-}
-body {
-  font-family: var(--font_family);
-  background-color: var(--black_color);
-  /* overflow-y: hidden; */
-}
-/******************* Start main Global ********************/
-    a {
-      text-decoration: none;
-      color: var(--black_color);
-      transition: color 0.3s;
-    }
-    h1,h2,h3,h4,h5,h6 {
-      font-weight: bold;
-    }
-    p {
-      line-height: 1.8;
-    }
-    p,h1,h2,h3,h4,h5,h6,small,span,li {
-      margin-bottom: 0;
-    }
-    i {
-      color: var(--secondary_color);
-      cursor: pointer;
-      transition: color 0.3s;
-    }
-    ul {
-      list-style: none;
-      margin-bottom: 0;
-      padding: 0;
-    }
-    ::selection {
-      background-color: var(--secondary_color);
-      color: var(--white_color);
-    }
-    body::-webkit-scrollbar,
-    .offcanvas-body::-webkit-scrollbar,
-    .modal::-webkit-scrollbar {
-      width: 0.8rem;
-    }
-    body::-webkit-scrollbar-track,
-    .offcanvas-body::-webkit-scrollbar-track,
-    .modal::-webkit-scrollbar-track  {
-      background: #f157244d;
-    }
-    body::-webkit-scrollbar-thumb,
-    .offcanvas-body::-webkit-scrollbar-thumb,
-    .modal::-webkit-scrollbar-thumb {
-      background-color: var(--secondary_color);
-      border-radius: 20px;
-      border: 5px solid #f157244d;
-    }
-
-    /* Start Master_Head */
-    .Master_Head{
-      display: flex;
-      justify-content: space-between;
-    }
-    .Master_Head .head h2{
-      font-size: 2rem;
-      text-transform: uppercase;
-      color: var(--secondary_color);
-    }
-    @media (max-width:576px) {
+    --main_color: #f15824;
+    --secondary_color:#f67f1d;
+    --white_color: #fff;
+    --black_color: #000;
+    --black_50_color:#0d0c0c;
+    --font_family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --font_family_sec:'Kaushan Script', cursive;
+  }
+  body {
+    font-family: var(--font_family);
+    background-color: var(--black_color);
+    /* overflow-y: hidden; */
+  }
+  /******************* Start main Global ********************/
+      a {
+        text-decoration: none;
+        color: var(--black_color);
+        -webkit-transition: color 0.3s;
+        -o-transition: color 0.3s;
+        transition: color 0.3s;
+      }
+      h1,h2,h3,h4,h5,h6 {
+        font-weight: bold;
+      }
+      p {
+        line-height: 1.8;
+      }
+      p,h1,h2,h3,h4,h5,h6,small,span,li {
+        margin-bottom: 0;
+      }
+      i {
+        color: var(--secondary_color);
+        cursor: pointer;
+        -webkit-transition: color 0.3s;
+        -o-transition: color 0.3s;
+        transition: color 0.3s;
+      }
+      ul {
+        list-style: none;
+        margin-bottom: 0;
+        padding: 0;
+      }
+      ::-moz-selection {
+        background-color: var(--secondary_color);
+        color: var(--white_color);
+      }
+      ::selection {
+        background-color: var(--secondary_color);
+        color: var(--white_color);
+      }
+      body::-webkit-scrollbar,
+      .offcanvas-body::-webkit-scrollbar,
+      .modal::-webkit-scrollbar {
+        width: 0.8rem;
+      }
+      body::-webkit-scrollbar-track,
+      .offcanvas-body::-webkit-scrollbar-track,
+      .modal::-webkit-scrollbar-track  {
+        background: #f157244d;
+      }
+      body::-webkit-scrollbar-thumb,
+      .offcanvas-body::-webkit-scrollbar-thumb,
+      .modal::-webkit-scrollbar-thumb {
+        background-color: var(--secondary_color);
+        border-radius: 20px;
+        border: 5px solid #f157244d;
+      }
+  
+      /* Start Master_Head */
+      .Master_Head{
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
+      }
       .Master_Head .head h2{
-        font-size: 1.5rem;
-      }
-    }
-    .Master_Head .page_num{
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background-color: var(--secondary_color);
-      width: 40px;
-      height: 40px;
-      font-weight: bold;
-      color: var(--white_color);
-      font-size: 18px;
-    }
-    .brd{
-      height: 5px;
-      width: 48px;
-      margin-top: 0.5rem;
-      background-color: var(--secondary_color);
-    }
-    /* End Master_Head*/
-
-/******************* End main Global ********************/
-
-/********************** For Loading /***********************/
-    .loading {
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background-color: var(--black_color);
-      z-index: 999999999999999;
-      display: flex;  
-      justify-content: center;
-      align-items: center;
-    }
-    .my-logo, 
-    .my-img{
-      position: relative;
-      width: 170px;
-      height: 170px;
-      background-color: var(--secondary_color);
-      border-radius: 50%;
-      overflow: hidden;
-      cursor: pointer;
-      margin: 0 auto;
-    }
-
-    @media (min-width:576px) {
-      .my-img{
-        width: 400px;
-        height: 400px;
-      }
-    }
-    .my-logo::before, 
-    .my-img::before{
-      position: absolute;
-      content: "";
-      inset: -10px 70px;
-      background:linear-gradient(315deg , #fa003f,#ff1100);
-      transition: 0.5s ;
-      animation: animate 1s linear infinite;
-    }
-    .my-logo:hover::before,
-    .my-img:hover::before{
-      inset: -20px 0px;
-    }
-    @keyframes animate {
-      0%{
-        transform: rotate(0deg);
-      }
-      100%{
-        transform: rotate(360deg);
-      }
-    }
-    .my-logo::after, .my-img::after{
-      content: "";
-      position: absolute;
-      inset: 6px;
-      background: var(--black_color);
-      border-radius: 50%;
-      z-index: 1;
-    }
-    .my-logo .content,
-    .my-img .content{
-      position: absolute;
-      inset: 20px;
-      border: 6px solid var(--secondary_color);
-      z-index: 3;
-      border-radius: 50%;
-      overflow: hidden;
-    }
-    .my-img .content{
-      inset: 30px;
-    }
-    .my-logo .content img,
-    .my-img .content img{
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      pointer-events: none;
-      object-fit: cover;
-      transition: 0.5s;
-    }
-
-/*********************** End For Loading ********************/
-
-/************************ Start Main Slide ************************/
-    #Main_Slider{
-      position: relative;
-      height: 100vh;
-      background: var(--black_color);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      overflow: hidden;
-    }
-
-    /* Start  Ny_name */
-      .My_name{
-        margin-top: 3rem;
-        text-align: center;
-      }
-      .My_name h1,.My_name h2{
+        font-size: 2rem;
         text-transform: uppercase;
         color: var(--secondary_color);
       }
       @media (max-width:576px) {
-        .My_name h1{
+        .Master_Head .head h2{
           font-size: 1.5rem;
         }
-        .My_name h2{
-          font-size: 1rem;
-        }
       }
-    /* End  Ny_name */
-
-    /* Start  Sections */
-      .My_sections{
-        position: absolute;
-        top: 50%;
-        right: 0;
-        transform: translateY(-50%);
-        margin-right:1rem ;
-        z-index: 555;
-      }
-      .My_sections li{
+      .Master_Head .page_num{
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        justify-content: flex-end;
-        align-items: center;
-        margin: .5rem;
-        cursor: pointer;
-      }
-      .My_sections span{
-        padding:2px 5px;
-        background-color: var(--white_color);
-        border-radius: 4px;
-        font-size: 14px;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        background-color: var(--secondary_color);
+        width: 40px;
+        height: 40px;
         font-weight: bold;
-        color: var(--secondary_color);
+        color: var(--white_color);
+        font-size: 18px;
+      }
+      .brd{
+        height: 5px;
+        width: 48px;
+        margin-top: 0.5rem;
+        background-color: var(--secondary_color);
+      }
+      /* End Master_Head*/
+  
+  /******************* End main Global ********************/
+  
+  /********************** For Loading /***********************/
+      .loading {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: var(--black_color);
+        z-index: 999999999999999;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;  
+        -webkit-box-pack: center;  
+            -ms-flex-pack: center;  
+                justify-content: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+      }
+      .my-logo, 
+      .my-img{
         position: relative;
-        opacity: 0;
-        transition: opacity 0.3s;
-      }
-      .My_sections span::before{
-        content: '';
-        position: absolute;
-        right: -8px;
-        bottom: 8px;
-        border-width: 4px;
-        border-style: solid;
-        border-color: transparent  transparent transparent var(--white_color);
-      }
-      .My_sections .icons a{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 30px;
-        height: 30px;
+        width: 170px;
+        height: 170px;
         background-color: var(--secondary_color);
         border-radius: 50%;
-        margin-left: 0.7rem;
-        transition:background-color 0.3s;
+        overflow: hidden;
+        cursor: pointer;
+        margin: 0 auto;
       }
-      .My_sections .icons a:hover{
+  
+      @media (min-width:576px) {
+        .my-img{
+          width: 400px;
+          height: 400px;
+        }
+      }
+      .my-logo::before, 
+      .my-img::before{
+        position: absolute;
+        content: "";
+        inset: -10px 70px;
+        background:-o-linear-gradient(135deg , #fa003f,#ff1100);
+        background:linear-gradient(315deg , #fa003f,#ff1100);
+        -webkit-transition: 0.5s ;
+        -o-transition: 0.5s ;
+        transition: 0.5s ;
+        -webkit-animation: animate 1s linear infinite;
+                animation: animate 1s linear infinite;
+      }
+      .my-logo:hover::before,
+      .my-img:hover::before{
+        inset: -20px 0px;
+      }
+      @-webkit-keyframes animate {
+        0%{
+          -webkit-transform: rotate(0deg);
+                  transform: rotate(0deg);
+        }
+        100%{
+          -webkit-transform: rotate(360deg);
+                  transform: rotate(360deg);
+        }
+      }
+      @keyframes animate {
+        0%{
+          -webkit-transform: rotate(0deg);
+                  transform: rotate(0deg);
+        }
+        100%{
+          -webkit-transform: rotate(360deg);
+                  transform: rotate(360deg);
+        }
+      }
+      .my-logo::after, .my-img::after{
+        content: "";
+        position: absolute;
+        inset: 6px;
+        background: var(--black_color);
+        border-radius: 50%;
+        z-index: 1;
+      }
+      .my-logo .content,
+      .my-img .content{
+        position: absolute;
+        inset: 20px;
+        border: 6px solid var(--secondary_color);
+        z-index: 3;
+        border-radius: 50%;
+        overflow: hidden;
+      }
+      .my-img .content{
+        inset: 30px;
+      }
+      .my-logo .content img,
+      .my-img .content img{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        -o-object-fit: cover;
+           object-fit: cover;
+        -webkit-transition: 0.5s;
+        -o-transition: 0.5s;
+        transition: 0.5s;
+      }
+  
+  /*********************** End For Loading ********************/
+  
+  /************************ Start Main Slide ************************/
+      #Main_Slider{
+        position: relative;
+        height: 100vh;
+        background: var(--black_color);
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        overflow: hidden;
+      }
+  
+      /* Start  Ny_name */
+        .My_name{
+          margin-top: 3rem;
+          text-align: center;
+        }
+        .My_name h1,.My_name h2{
+          text-transform: uppercase;
+          color: var(--secondary_color);
+        }
+        @media (max-width:576px) {
+          .My_name h1{
+            font-size: 1.5rem;
+          }
+          .My_name h2{
+            font-size: 1rem;
+          }
+        }
+      /* End  Ny_name */
+  
+      /* Start  Sections */
+        .My_sections{
+          position: absolute;
+          top: 50%;
+          right: 0;
+          -webkit-transform: translateY(-50%);
+              -ms-transform: translateY(-50%);
+                  transform: translateY(-50%);
+          margin-right:1rem ;
+          z-index: 555;
+        }
+        .My_sections li{
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-pack: end;
+              -ms-flex-pack: end;
+                  justify-content: flex-end;
+          -webkit-box-align: center;
+              -ms-flex-align: center;
+                  align-items: center;
+          margin: .5rem;
+          cursor: pointer;
+        }
+        .My_sections span{
+          padding:2px 5px;
+          background-color: var(--white_color);
+          border-radius: 4px;
+          font-size: 14px;
+          font-weight: bold;
+          color: var(--secondary_color);
+          position: relative;
+          opacity: 0;
+          -webkit-transition: opacity 0.3s;
+          -o-transition: opacity 0.3s;
+          transition: opacity 0.3s;
+        }
+        .My_sections span::before{
+          content: '';
+          position: absolute;
+          right: -8px;
+          bottom: 8px;
+          border-width: 4px;
+          border-style: solid;
+          border-color: transparent  transparent transparent var(--white_color);
+        }
+        .My_sections .icons a{
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-pack: center;
+              -ms-flex-pack: center;
+                  justify-content: center;
+          -webkit-box-align: center;
+              -ms-flex-align: center;
+                  align-items: center;
+          width: 30px;
+          height: 30px;
+          background-color: var(--secondary_color);
+          border-radius: 50%;
+          margin-left: 0.7rem;
+          -webkit-transition:background-color 0.3s;
+          -o-transition:background-color 0.3s;
+          transition:background-color 0.3s;
+        }
+        .My_sections .icons a:hover{
+          background-color: var(--white_color);
+        }
+        .My_sections i{
+          color: var(--white_color);
+          font-size: 12px;
+        }
+        .My_sections .icons a:hover i{
+          color: var(--secondary_color);
+        }
+        .My_sections li:hover span{
+          opacity: 1;
+        }
+      /* End  Sections */
+  
+      /* Start  Social */
+      .My_social{
+        position: fixed;
+        bottom: 0;
+        left: 50%;
+        -webkit-transform: translateX(-50%);
+            -ms-transform: translateX(-50%);
+                transform: translateX(-50%);
+        background-color: #f157244d;
+        border-radius: 10px;
+        padding:0.3rem;
+        margin-bottom: 1rem;
+        z-index: 999;
+        width: 50px;
+        height: 50px;
+        cursor: pointer;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -webkit-transition: .5s;
+        -o-transition: .5s;
+        transition: .5s;
+        -webkit-transition-delay: .8s;
+             -o-transition-delay: .8s;
+                transition-delay: .8s;
+      }
+      .My_social.active{
+        width: 100px;
+        height: 100px;
+        -webkit-transition-delay: 0s;
+             -o-transition-delay: 0s;
+                transition-delay: 0s;
+      }
+  
+      .My_social span{
+        position: absolute;
+        width: 7px;
+        height: 7px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        background-color: var(--secondary_color);
+        border-radius: 50%;
+        -webkit-transition: 0.5s;
+        -o-transition: 0.5s;
+        transition: 0.5s;
+        -webkit-transform: translate(calc(6px * var(--x)),calc(6px * var(--y)));
+            -ms-transform: translate(calc(6px * var(--x)),calc(6px * var(--y)));
+                transform: translate(calc(6px * var(--x)),calc(6px * var(--y)));
+        -webkit-transition: width 0.5s , height 0.5s, background-color 0.5s , -webkit-transform 0.5s;
+        transition: width 0.5s , height 0.5s, background-color 0.5s , -webkit-transform 0.5s;
+        -o-transition: transform 0.5s , width 0.5s , height 0.5s, background-color 0.5s ;
+        transition: transform 0.5s , width 0.5s , height 0.5s, background-color 0.5s ;
+        transition: transform 0.5s , width 0.5s , height 0.5s, background-color 0.5s , -webkit-transform 0.5s;
+        -webkit-transition-delay: calc(0.1s * var(--i));
+             -o-transition-delay: calc(0.1s * var(--i));
+                transition-delay: calc(0.1s * var(--i));
+      }
+  
+      .My_social.active span{
+        width: 35px;
+        height: 35px;
+        background-color: var(--secondary_color);
+        -webkit-transform: translate(calc(20px * var(--x)),calc(20px * var(--y)));
+            -ms-transform: translate(calc(20px * var(--x)),calc(20px * var(--y)));
+                transform: translate(calc(20px * var(--x)),calc(20px * var(--y)));
+        -webkit-transition: background-color 0.5s;
+        -o-transition: background-color 0.5s;
+        transition: background-color 0.5s;
+      }
+  
+      .My_social.active span a{
+        width: 100%;
+        text-align: center;
+        line-height: 35px;
+      }
+      
+      .My_social span i {
+        -webkit-transition: 0.5s;
+        -o-transition: 0.5s;
+        transition: 0.5s;
+        font-size:0rem;
+      }
+  
+      .My_social.active span i{
+        font-size: 1rem;
+        color: var(--white_color);
+      }
+  
+      .My_social.active span:hover{
         background-color: var(--white_color);
       }
-      .My_sections i{
-        color: var(--white_color);
-        font-size: 12px;
-      }
-      .My_sections .icons a:hover i{
+      .My_social.active span:hover i{
         color: var(--secondary_color);
       }
-      .My_sections li:hover span{
-        opacity: 1;
+      /* End  Social */
+  /************************ End Main Slide ************************/
+  
+  /************************ Start About Me ************************/
+      #About_Me{
+        padding: 5rem 0;
+        background-color: var(--black_50_color);
+        overflow: hidden;
       }
-    /* End  Sections */
-
-    /* Start  Social */
-    .My_social{
-      position: fixed;
-      bottom: 0;
-      left: 50%;
-      transform: translateX(-50%);
-      background-color: #f157244d;
-      border-radius: 10px;
-      padding:0.3rem;
-      margin-bottom: 1rem;
-      z-index: 999;
-      width: 50px;
-      height: 50px;
-      cursor: pointer;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      transition: .5s;
-      transition-delay: .8s;
+        /* Start my_img */
+          .my_img,.my_img img{width: 100%; height: 100%;}
+        /* End my_img */
+  
+        .my_info{
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-pack: center;
+              -ms-flex-pack: center;
+                  justify-content: center;
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: normal;
+              -ms-flex-direction: column;
+                  flex-direction: column;
+          height: 100%;
+        }
+        .my_name h3{
+          text-transform: capitalize;
+          font-size: 1.6rem;
+          line-height: 1.4;
+          color: var(--secondary_color);
+        }
+        .my_info p {
+          color: var(--white_color);
+          font-size: 18px;
+          margin: 3rem 0;
+        }
+        /* Start sub_info */
+          .sub_info{
+            margin: 0 auto;
+            width: 75%;
+          }
+          .sub_info .info_inner {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                    justify-content: center;
+            -webkit-box-align: center;
+                -ms-flex-align: center;
+                    align-items: center;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: column;
+                    flex-direction: column;
+            color: var(--white_color);
+            background-color: var(--secondary_color);
+            height: 100%;
+            padding:.8rem;
+          }
+          .sub_info .info_inner i{
+            color: var(--white_color);
+            font-size: 25px;
+          }
+          .sub_info .info_inner span{
+            text-align: center;
+            font-size: 14px;
+            font-weight: 500;
+          }
+          .info_inner span:nth-child(2) {
+            margin-top: 5px;
+          }
+        /* End sub_info */
+  
+  /************************ End About Me ************************/
+  
+  /************************ Start Skills ************************/
+    #Skills{
+      padding: 5rem 0;
+      overflow: hidden;
     }
-    .My_social.active{
-      width: 100px;
-      height: 100px;
-      transition-delay: 0s;
-    }
-
-    .My_social span{
-      position: absolute;
-      width: 7px;
-      height: 7px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background-color: var(--secondary_color);
-      border-radius: 50%;
-      transition: 0.5s;
-      transform: translate(calc(6px * var(--x)),calc(6px * var(--y)));
-      transition: transform 0.5s , width 0.5s , height 0.5s, background-color 0.5s ;
-      transition-delay: calc(0.1s * var(--i));
-    }
-
-    .My_social.active span{
-      width: 35px;
-      height: 35px;
-      background-color: var(--secondary_color);
-      transform: translate(calc(20px * var(--x)),calc(20px * var(--y)));
-      transition: background-color 0.5s;
-    }
-
-    .My_social.active span a{
-      width: 100%;
-      text-align: center;
-      line-height: 35px;
-    }
-    
-    .My_social span i {
-      transition: 0.5s;
-      font-size:0rem;
-    }
-
-    .My_social.active span i{
-      font-size: 1rem;
-      color: var(--white_color);
-    }
-
-    .My_social.active span:hover{
-      background-color: var(--white_color);
-    }
-    .My_social.active span:hover i{
-      color: var(--secondary_color);
-    }
-    /* End  Social */
-/************************ End Main Slide ************************/
-
-/************************ Start About Me ************************/
-    #About_Me{
+    /* Start Chart */
+      .chart{
+        position: relative;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        height: 100%;
+      }
+      .chart canvas{
+        position: absolute;
+        top: 0;
+      }
+      .percent{
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 110px;
+        color: var(--white_color);
+      }
+      .label{
+        font-size: 18px;
+        font-weight: 500;
+        color: var(--white_color);
+        margin-top: 5px;
+      }
+    /* End Chart */
+  /************************ End Skills ************************/
+  
+  /************************ Start Resume  ************************/
+    #Resume{
       padding: 5rem 0;
       background-color: var(--black_50_color);
       overflow: hidden;
     }
-      /* Start my_img */
-        .my_img,.my_img img{width: 100%; height: 100%;}
-      /* End my_img */
-
-      .my_info{
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        height: 100%;
-      }
-      .my_name h3{
-        text-transform: capitalize;
-        font-size: 1.6rem;
-        line-height: 1.4;
+      .resume-title{
+        margin-bottom: 1.5rem;
         color: var(--secondary_color);
       }
-      .my_info p {
+      .resume-body{
+        position: relative;
+        margin-bottom: 1.5rem;
+        padding-left: 1rem;
+        border-left: 3px solid var(--secondary_color);
         color: var(--white_color);
-        font-size: 18px;
-        margin: 3rem 0;
       }
-      /* Start sub_info */
-        .sub_info{
-          margin: 0 auto;
-          width: 75%;
-        }
-        .sub_info .info_inner {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          flex-direction: column;
-          color: var(--white_color);
-          background-color: var(--secondary_color);
-          height: 100%;
-          padding:.8rem;
-        }
-        .sub_info .info_inner i{
-          color: var(--white_color);
-          font-size: 25px;
-        }
-        .sub_info .info_inner span{
-          text-align: center;
-          font-size: 14px;
-          font-weight: 500;
-        }
-        .info_inner span:nth-child(2) {
-          margin-top: 5px;
-        }
-      /* End sub_info */
-
-/************************ End About Me ************************/
-
-/************************ Start Skills ************************/
-  #Skills{
-    padding: 5rem 0;
-    overflow: hidden;
-  }
-  /* Start Chart */
-    .chart{
-      position: relative;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      height: 100%;
+      .resume-body::after{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -8px;
+        width: 15px;
+        height: 15px;
+        background: #000;
+        border-radius: 50%;
+        border: 3px solid var(--secondary_color);
+      }
+      .resume-body h4{
+        color: var(--secondary_color);
+        font-size: 1.12rem;
+        font-weight: bold;
+      }
+      .resume-body .ul_bloodBank,
+      .resume-body .ul_movie,
+      .resume-body .ul_note,
+      .ul_bloodBank_in{
+        list-style-type: disc;
+        list-style-position: inside;
+      }
+      .resume-body .ul_bloodBank a,
+      .resume-body .ul_movie  a,
+      .resume-body .ul_note  a{
+        display: block;
+        margin-top: 5px;
+        padding: 5px 10px;
+        font-weight: 600;
+        width:-moz-fit-content;
+        width: -webkit-fit-content;
+        width: fit-content;
+        background-color: var(--secondary_color);
+        color: var(--white_color);
+        -webkit-transition:  color 0.5s,background-color 0.5s;
+        -o-transition:  color 0.5s,background-color 0.5s;
+        transition:  color 0.5s,background-color 0.5s;
+      }
+      .resume-body .ul_bloodBank a:hover,
+      .resume-body .ul_movie  a:hover,
+      .resume-body .ul_note  a:hover{
+        background-color: var(--white_color);
+        color:  var(--secondary_color);
+      }
+      .resume-body p{margin-bottom: 1rem;}
+      .resume-body span{
+        width: -webkit-fit-content;
+        width: -moz-fit-content;
+        width: fit-content;
+        background-color: var(--secondary_color);
+        font-weight: 500;
+        color: var(--white_color);
+        margin: 5px 0;
+      }
+  
+  
+  /************************ End Resume  ************************/
+  
+  
+  /************************ Start MY Works  ************************/
+    #MyWorks{
+      padding: 5rem 0;
+      overflow: hidden;
     }
-    .chart canvas{
-      position: absolute;
-      top: 0;
+  
+    /* Start nav-pills */
+      .nav-pills{
+        margin-top: 0;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+      }
+      .nav-link{
+        width: 55px;
+        color: var(--white_color);
+        font-weight: 700;
+        font-size: 14px;
+        margin: 4px;
+        padding: 7px 0 !important;
+        border-radius: 0 !important;
+        background-color: var(--secondary_color) !important;
+        -webkit-transition: background-color 0.3s ,color 0.3s;
+        -o-transition: background-color 0.3s ,color 0.3s;
+        transition: background-color 0.3s ,color 0.3s;
+      }
+      .nav-link:hover{
+        background-color: var(--white_color) !important;
+        color:var(--secondary_color)
+      }
+      .nav-link.active{
+        color:var(--secondary_color) !important;
+        background-color: var(--white_color) !important;
+      }
+    /* End */
+  
+    /* Start tab-work-pane */
+      .item-img{
+        position: relative;
+      }
+      .item-img img{
+        -webkit-transition: all 0.5s;
+        -o-transition: all 0.5s;
+        transition: all 0.5s;
+      }
+      .img-info{
+        position: absolute;
+        inset: 0;
+        opacity: 0;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        background-color: rgb(0, 0, 0, 0.7);
+        -webkit-transition: opacity 0.3s;
+        -o-transition: opacity 0.3s;
+        transition: opacity 0.3s;
+      }
+      .plus i,
+      .pro-link i{
+        color:var(--white_color);
+        font-size: 20px;
+        padding: 10px 15px;
+        background-color: var(--secondary_color);
+        cursor: pointer;
+        margin: 2px;
+        -webkit-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.3s;
+      }
+      .plus i:hover,
+      .pro-link i:hover{
+        color:var(--secondary_color);
+        background-color: var(--white_color);
+      }
+      .item-img:hover{
+        -webkit-box-shadow: 0px 0px 5px 7px var(--secondary_color);
+                box-shadow: 0px 0px 5px 7px var(--secondary_color);
+      }
+      .item-img:hover .img-info{
+        opacity: 1;
+      }
+    /* End */
+    /* Start Modal */
+      .modal-content{
+        background-color: transparent !important;
+        border: none !important;
+        border-radius: 0 !important; 
+      }
+      .modal-tools{
+        font-size: 27px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+      }
+      .modal-tools .fa-times-square{
+        position: absolute;
+        top: -45px;
+        right: 0;
+        font-size: 35px;
+      }
+      .modal-tools .fa-angle-left,
+      .modal-tools .fa-angle-right{
+        background: #62330c;
+        width: 35px;
+        height: 35px;
+        margin: 10px;
+        border-radius: 3px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+      }
+      @media (min-width: 576px){
+        .modal-dialog {
+          max-width: 800px !important;}
+      }
+    /* End */
+  /************************ End MY Works  ************************/
+  
+  /************************ Start Services  ************************/
+    #Services{
+      padding: 5rem 0;
+      background-color: var(--black_50_color);
+      overflow: hidden;
     }
-    .percent{
-      font-size: 18px;
-      font-weight: 500;
-      line-height: 110px;
-      color: var(--white_color);
-    }
-    .label{
-      font-size: 18px;
-      font-weight: 500;
-      color: var(--white_color);
-      margin-top: 5px;
-    }
-  /* End Chart */
-/************************ End Skills ************************/
-
-/************************ Start Resume  ************************/
-  #Resume{
-    padding: 5rem 0;
-    background-color: var(--black_50_color);
-    overflow: hidden;
-  }
-    .resume-title{
-      margin-bottom: 1.5rem;
-      color: var(--secondary_color);
-    }
-    .resume-body{
-      position: relative;
-      margin-bottom: 1.5rem;
-      padding-left: 1rem;
-      border-left: 3px solid var(--secondary_color);
-      color: var(--white_color);
-    }
-    .resume-body::after{
-      content: '';
-      position: absolute;
-      top: 0;
-      left: -8px;
-      width: 15px;
-      height: 15px;
-      background: #000;
-      border-radius: 50%;
-      border: 3px solid var(--secondary_color);
-    }
-    .resume-body h4{
-      color: var(--secondary_color);
-      font-size: 1.12rem;
-      font-weight: bold;
-    }
-    .resume-body p{margin-bottom: 1rem;}
-    .resume-body span{
-      width: -webkit-fit-content;
-      width: -moz-fit-content;
-      width: fit-content;
-      background-color: var(--secondary_color);
-      font-weight: 500;
-      color: var(--white_color);
-      margin: 5px 0;
-    }
-
-/************************ End Resume  ************************/
-
-
-/************************ Start MY Works  ************************/
-  #MyWorks{
-    padding: 5rem 0;
-    overflow: hidden;
-  }
-
-  /* Start nav-pills */
-    .nav-pills{
-      margin-top: 0;
-      justify-content: center;
-    }
-    .nav-link{
-      width: 55px;
-      color: var(--white_color);
-      font-weight: 700;
-      font-size: 14px;
-      margin: 4px;
-      padding: 7px 0 !important;
-      border-radius: 0 !important;
-      background-color: var(--secondary_color) !important;
-      transition: background-color 0.3s ,color 0.3s;
-    }
-    .nav-link:hover{
-      background-color: var(--white_color) !important;
-      color:var(--secondary_color)
-    }
-    .nav-link.active{
-      color:var(--secondary_color) !important;
-      background-color: var(--white_color) !important;
-    }
-  /* End */
-
-  /* Start tab-work-pane */
-    .item-img{
-      position: relative;
-    }
-    .item-img img{
-      transition: all 0.5s;
-    }
-    .img-info{
-      position: absolute;
-      inset: 0;
-      opacity: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background-color: rgb(0, 0, 0, 0.7);
-      transition: opacity 0.3s;
-    }
-    .plus i,
-    .pro-link i{
-      color:var(--white_color);
-      font-size: 20px;
-      padding: 10px 15px;
-      background-color: var(--secondary_color);
-      cursor: pointer;
-      margin: 2px;
-      transition: all 0.3s;
-    }
-    .plus i:hover,
-    .pro-link i:hover{
-      color:var(--secondary_color);
-      background-color: var(--white_color);
-    }
-    .item-img:hover{
-      box-shadow: 0px 0px 5px 7px var(--secondary_color);
-    }
-    .item-img:hover .img-info{
-      opacity: 1;
-    }
-  /* End */
-  /* Start Modal */
-    .modal-content{
-      background-color: transparent !important;
-      border: none !important;
-      border-radius: 0 !important; 
-    }
-    .modal-tools{
-      font-size: 27px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-    .modal-tools .fa-times-square{
-      position: absolute;
-      top: -45px;
-      right: 0;
-      font-size: 35px;
-    }
-    .modal-tools .fa-angle-left,
-    .modal-tools .fa-angle-right{
-      background: #62330c;
+    /* Start service */
+      .service{
+        position: relative;
+        height: 100%;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        padding: 1rem 2rem;
+        background-color: var(--white_color);
+        cursor: pointer;
+      } 
+      .service i{
+        position: relative;
+        font-size: 2rem;
+        margin-right: 1.5rem;
+      }
+      .ser-info{
+        position: relative;
+      }
+      .ser-info h5{
+        color: var(--black_color);
+        font-weight: 700;
+        -webkit-transition: color .3s ease-in-out;
+        -o-transition: color .3s ease-in-out;
+        transition: color .3s ease-in-out;
+      }
+      .ser-info small{
+        color: #999;
+        font-weight: 500;
+        -webkit-transition: color .3s ease-in-out;
+        -o-transition: color .3s ease-in-out;
+        transition: color .3s ease-in-out;
+      }
+      .service::before{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 7px;
+        height: 100%;
+        background-color: var(--secondary_color);
+        -webkit-transition:width .3s ease-in-out;
+        -o-transition:width .3s ease-in-out;
+        transition:width .3s ease-in-out;
+      }
+      .service:hover h5,
+      .service:hover small,
+      .service:hover i{
+        color: var(--white_color);
+      }
+      .service:hover::before{
+        width: 100%;
+      }
+    /* End */
+  /************************ End Services  ************************/
+  
+  /*********************** Start Btn_Up ********************/
+    #btnUp{
+      position: fixed;
+      bottom: 30px;
+      right: 20px;
       width: 35px;
       height: 35px;
-      margin: 10px;
-      border-radius: 3px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      line-height: 35px;
+      z-index: 99999;
+      background-color:  var(--secondary_color);
+      -webkit-transition: background-color 0.3s;
+      -o-transition: background-color 0.3s;
+      transition: background-color 0.3s;
+      text-align: center;
+      display: none;
     }
-    @media (min-width: 576px){
-      .modal-dialog {
-        max-width: 800px !important;}
-    }
-  /* End */
-/************************ End MY Works  ************************/
-
-/************************ Start Services  ************************/
-  #Services{
-    padding: 5rem 0;
-    background-color: var(--black_50_color);
-    overflow: hidden;
-  }
-  /* Start service */
-    .service{
-      position: relative;
-      height: 100%;
-      display: flex;
-      align-items: center;
-      padding: 1rem 2rem;
-      background-color: var(--white_color);
-      cursor: pointer;
-    } 
-    .service i{
-      position: relative;
-      font-size: 2rem;
-      margin-right: 1.5rem;
-    }
-    .ser-info{
-      position: relative;
-    }
-    .ser-info h5{
-      color: var(--black_color);
-      font-weight: 700;
-      transition: color .3s ease-in-out;
-    }
-    .ser-info small{
-      color: #999;
-      font-weight: 500;
-      transition: color .3s ease-in-out;
-    }
-    .service::before{
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 7px;
-      height: 100%;
-      background-color: var(--secondary_color);
-      transition:width .3s ease-in-out;
-    }
-    .service:hover h5,
-    .service:hover small,
-    .service:hover i{
+    #btnUp i{
+      font-size: 22px;
       color: var(--white_color);
     }
-    .service:hover::before{
-      width: 100%;
+    #btnUp:hover{
+      background-color: var(--white_color);
     }
-  /* End */
-/************************ End Services  ************************/
-
-/*********************** Start Btn_Up ********************/
-  #btnUp{
-    position: fixed;
-    bottom: 30px;
-    right: 20px;
-    width: 35px;
-    height: 35px;
-    line-height: 35px;
-    z-index: 99999;
-    background-color:  var(--secondary_color);
-    transition: background-color 0.3s;
-    text-align: center;
-    display: none;
-  }
-  #btnUp i{
-    font-size: 22px;
-    color: var(--white_color);
-  }
-  #btnUp:hover{
-    background-color: var(--white_color);
-  }
-  #btnUp:hover i{
-    color: var(--secondary_color);
-  }
-/*********************** End Btn_Up ********************/
+    #btnUp:hover i{
+      color: var(--secondary_color);
+    }
+  /*********************** End Btn_Up ********************/
