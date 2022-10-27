@@ -33,18 +33,18 @@ $("a[href^= '#'] ").click(function(e) {
 
 /********* Start My_social *******/
 let My_social = document.querySelector('.My_social');
-My_social.addEventListener('click', function() {
-    My_social.classList.add('active');
+My_social.addEventListener('click', function(e) {
+    e.currentTarget.classList.add('active');
+
+    if(e.target.hasAttribute('href') || e.target.classList.contains('fas') || e.target.classList.contains('fab')){
+        e.currentTarget.classList.remove('active');
+    }
 });
 
-document.addEventListener('click', function() {
-    if (My_social.classList.contains('active')) {
+window.addEventListener('scroll', function() {
+    if(My_social.classList.contains('active')){
         My_social.classList.remove('active');
     }
-}, true); //true -> capture this make click event fire from out to in
-
-window.addEventListener('scroll', function() {
-    My_social.classList.remove('active');
 });
 
 /* ****** End ****** */
@@ -246,25 +246,25 @@ $('#btnUp').click(function() {
 
 /* ******************* Start lock inspect ****************** */
 
-document.onkeydown = function(e) {
-    if (e.key === 'F12') { // f12
-        return false;
-    }
-    if (e.ctrlKey == true && e.shiftKey == true && e.key == 'I') {
-        return false;
-    }
-    if (e.ctrlKey == true && e.shiftKey == true && e.key == 'C') {
-        return false;
-    }
-    if (e.ctrlKey == true && e.shiftKey == true && e.key == 'J') {
-        return false;
-    }
-    // view source code for html source
-    if (e.ctrlKey == true && (e.key == 'U' || e.key == 'u')) {
-        return false;
-    }
-};
+// document.onkeydown = function(e) {
+//     if (e.key === 'F12') { // f12
+//         return false;
+//     }
+//     if (e.ctrlKey == true && e.shiftKey == true && e.key == 'I') {
+//         return false;
+//     }
+//     if (e.ctrlKey == true && e.shiftKey == true && e.key == 'C') {
+//         return false;
+//     }
+//     if (e.ctrlKey == true && e.shiftKey == true && e.key == 'J') {
+//         return false;
+//     }
+//     // view source code for html source
+//     if (e.ctrlKey == true && (e.key == 'U' || e.key == 'u')) {
+//         return false;
+//     }
+// };
 
-document.addEventListener('contextmenu', e => e.preventDefault());
+// document.addEventListener('contextmenu', e => e.preventDefault());
 
 /* ******************* End lock inspect ****************** */
