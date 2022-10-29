@@ -1,5 +1,41 @@
+/* ******************* Start Change website colors ****************** */
+/* For OptionsBox */
+// $('#toggleBtn').click(function(){
+//     let colorBoxWidth = $(".colors-box").innerWidth();
+
+//     if($('#optionsBox').css("left") == "0px"){
+//         $('#optionsBox').animate({left:`-${colorBoxWidth}`}, 1000);
+//     }
+//     else{
+//         $('#optionsBox').animate({left:`0px`}, 1000);
+//     }
+// })
+// let colorItem = $(".color-item");
+// colorItem.eq(0).css("backgroundColor" , "#f61d1d");
+// colorItem.eq(1).css("backgroundColor" , "#1976d2");
+// colorItem.eq(2).css("backgroundColor" , "#16A085");
+// colorItem.eq(3).css("backgroundColor" , "#2ECC71");
+
+
+// colorItem.click(function(e){
+//     let bgColor = $(e.target).css("backgroundColor");
+//     $("body").css({"--main_color" : bgColor,});
+// })
+/* End OptionsBox */
+
+
+/* ******************* End Change website colors ****************** */
+
+
+
 /* ******************* Start Loading ****************** */
 $(document).ready(function() {
+
+    /* for OptionsBox */
+    // let colorBoxWidth = $(".colors-box").innerWidth();
+    // $('#optionsBox').animate({left:`-${colorBoxWidth}`}, 0);
+    /* End OptionsBox */
+
         $('.my-logo').fadeOut(2500, () => {
             $('.my-logo').parent().fadeOut(3500, () => {
                 $('.loading').remove();

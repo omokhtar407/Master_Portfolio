@@ -1,6 +1,4 @@
 :root {
-  --main_color: #f15824;
-  --secondary_color: #f67f1d;
   --white_color: #fff;
   --black_color: #000;
   --black_50_color: #0d0c0c;
@@ -8,9 +6,10 @@
   --font_family_sec: "Kaushan Script", cursive;
 }
 body {
+  --main_color: #f67f1d;
+  --secondary_color: #f157244d;
   font-family: var(--font_family);
   background-color: var(--black_color);
-  /* overflow-y: hidden; */
 }
 /******************* Start main Global ********************/
 a {
@@ -44,7 +43,7 @@ li {
   margin-bottom: 0;
 }
 i {
-  color: var(--secondary_color);
+  color: var(--main_color);
   cursor: pointer;
   -webkit-transition: color 0.3s;
   -o-transition: color 0.3s;
@@ -56,11 +55,11 @@ ul {
   padding: 0;
 }
 ::-moz-selection {
-  background-color: var(--secondary_color);
+  background-color: var(--main_color);
   color: var(--white_color);
 }
 ::selection {
-  background-color: var(--secondary_color);
+  background-color: var(--main_color);
   color: var(--white_color);
 }
 body::-webkit-scrollbar,
@@ -71,15 +70,57 @@ body::-webkit-scrollbar,
 body::-webkit-scrollbar-track,
 .offcanvas-body::-webkit-scrollbar-track,
 .modal::-webkit-scrollbar-track {
-  background: #f157244d;
+  background: var(--secondary_color);
 }
 body::-webkit-scrollbar-thumb,
 .offcanvas-body::-webkit-scrollbar-thumb,
 .modal::-webkit-scrollbar-thumb {
-  background-color: var(--secondary_color);
+  background-color: var(--main_color);
   border-radius: 20px;
-  border: 5px solid #f157244d;
+  border: 5px solid var(--secondary_color);
 }
+
+/* Start optionsBox */
+/* #optionsBox{
+  position: fixed;
+  top: 100px;
+  left: 0;
+  z-index: 999999;
+  cursor: pointer;
+}
+#optionsBox ul li{
+  font-weight: 600;
+color:#454444;
+}
+.colors-box{
+  padding: 15px;
+  background-color: var(--white_color)  ;
+  float: left;
+  box-shadow: 0 1px 2px rgb(35 35 35 / 10%), transparent 0 0 0, transparent 0 0 0;
+}
+.color-item{
+  width: 30px;
+  height: 30px;
+  background-color: var(--main_color);
+  display: inline-block;
+  cursor: pointer;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+#toggleBtn{
+  border-bottom-right-radius: 2px;
+  border-top-right-radius: 2px;
+  padding: 8px;
+  color: var(--white_color);
+  font-size: 18px;
+  background: var(--main_color);
+  float: left;
+  cursor: pointer;
+} */
+/* End optionsBox */
 
 /* Start Master_Head */
 .Master_Head {
@@ -93,7 +134,7 @@ body::-webkit-scrollbar-thumb,
 .Master_Head .head h2 {
   font-size: 2rem;
   text-transform: uppercase;
-  color: var(--secondary_color);
+  color: var(--main_color);
 }
 @media (max-width: 576px) {
   .Master_Head .head h2 {
@@ -110,7 +151,7 @@ body::-webkit-scrollbar-thumb,
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: var(--secondary_color);
+  background-color: var(--main_color);
   width: 40px;
   height: 40px;
   font-weight: bold;
@@ -121,7 +162,7 @@ body::-webkit-scrollbar-thumb,
   height: 5px;
   width: 48px;
   margin-top: 0.5rem;
-  background-color: var(--secondary_color);
+  background-color: var(--main_color);
 }
 /* End Master_Head*/
 
@@ -151,7 +192,7 @@ body::-webkit-scrollbar-thumb,
   position: relative;
   width: 170px;
   height: 170px;
-  background-color: var(--secondary_color);
+  background-color: var(--main_color);
   border-radius: 50%;
   overflow: hidden;
   cursor: pointer;
@@ -214,7 +255,7 @@ body::-webkit-scrollbar-thumb,
 .my-img .content {
   position: absolute;
   inset: 20px;
-  border: 6px solid var(--secondary_color);
+  border: 6px solid var(--main_color);
   z-index: 3;
   border-radius: 50%;
   overflow: hidden;
@@ -268,7 +309,7 @@ body::-webkit-scrollbar-thumb,
 .My_name h1,
 .My_name h2 {
   text-transform: uppercase;
-  color: var(--secondary_color);
+  color: var(--main_color);
 }
 @media (max-width: 576px) {
   .My_name h1 {
@@ -310,7 +351,7 @@ body::-webkit-scrollbar-thumb,
   border-radius: 4px;
   font-size: 14px;
   font-weight: bold;
-  color: var(--secondary_color);
+  color: var(--main_color);
   position: relative;
   opacity: 0;
   -webkit-transition: opacity 0.3s;
@@ -336,9 +377,9 @@ body::-webkit-scrollbar-thumb,
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  width: 30px;
-  height: 30px;
-  background-color: var(--secondary_color);
+  width: 35px;
+  height: 35px;
+  background-color: var(--main_color);
   border-radius: 50%;
   margin-left: 0.7rem;
   -webkit-transition: background-color 0.3s;
@@ -350,10 +391,10 @@ body::-webkit-scrollbar-thumb,
 }
 .My_sections i {
   color: var(--white_color);
-  font-size: 12px;
+  font-size: 15px;
 }
 .My_sections .icons a:hover i {
-  color: var(--secondary_color);
+  color: var(--main_color);
 }
 .My_sections li:hover span {
   opacity: 1;
@@ -368,7 +409,7 @@ body::-webkit-scrollbar-thumb,
   -webkit-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
   transform: translateX(-50%);
-  background-color: #f157244d;
+  background-color: var(--secondary_color);
   border-radius: 10px;
   padding: 0.3rem;
   margin-bottom: 1rem;
@@ -413,31 +454,30 @@ body::-webkit-scrollbar-thumb,
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: var(--secondary_color);
+  background-color: var(--main_color);
   border-radius: 50%;
-  -webkit-transition: 0.5s;
-  -o-transition: 0.5s;
+  -webkit-transition: transform 0.5s, width 0.5s, height 0.5s, background-color 0.5s,    -webkit-transform 0.5s;
+  -o-transition: transform 0.5s, width 0.5s, height 0.5s, background-color 0.5s,    -webkit-transform 0.5s;
   transition: 0.5s;
   -webkit-transform: translate(calc(6px * var(--x)), calc(6px * var(--y)));
   -ms-transform: translate(calc(6px * var(--x)), calc(6px * var(--y)));
   transform: translate(calc(6px * var(--x)), calc(6px * var(--y)));
-  -webkit-transition: width 0.5s, height 0.5s, background-color 0.5s,
-    -webkit-transform 0.5s;
-  transition: width 0.5s, height 0.5s, background-color 0.5s,
-    -webkit-transform 0.5s;
+  -webkit-transition: width 0.5s, height 0.5s, background-color 0.5s,    -webkit-transform 0.5s;
+  transition: width 0.5s, height 0.5s, background-color 0.5s,    -webkit-transform 0.5s;
   -o-transition: transform 0.5s, width 0.5s, height 0.5s, background-color 0.5s;
   transition: transform 0.5s, width 0.5s, height 0.5s, background-color 0.5s;
-  transition: transform 0.5s, width 0.5s, height 0.5s, background-color 0.5s,
-    -webkit-transform 0.5s;
+  transition: transform 0.5s, width 0.5s, height 0.5s, background-color 0.5s,    -webkit-transform 0.5s;
   -webkit-transition-delay: calc(0.1s * var(--i));
   -o-transition-delay: calc(0.1s * var(--i));
   transition-delay: calc(0.1s * var(--i));
+  -moz-transition: transform 0.5s, width 0.5s, height 0.5s, background-color 0.5s,    -webkit-transform 0.5s;
+  -ms-transition: transform 0.5s, width 0.5s, height 0.5s, background-color 0.5s,    -webkit-transform 0.5s;
 }
 
 .My_social.active span {
   width: 35px;
   height: 35px;
-  background-color: var(--secondary_color);
+  background-color: var(--main_color);
   -webkit-transform: translate(calc(20px * var(--x)), calc(20px * var(--y)));
   -ms-transform: translate(calc(20px * var(--x)), calc(20px * var(--y)));
   transform: translate(calc(20px * var(--x)), calc(20px * var(--y)));
@@ -468,7 +508,7 @@ body::-webkit-scrollbar-thumb,
   background-color: var(--white_color);
 }
 .My_social.active span:hover i {
-  color: var(--secondary_color);
+  color: var(--main_color);
 }
 /* End  Social */
 /************************ End Main Slide ************************/
@@ -504,7 +544,7 @@ body::-webkit-scrollbar-thumb,
   text-transform: capitalize;
   font-size: 1.6rem;
   line-height: 1.4;
-  color: var(--secondary_color);
+  color: var(--main_color);
 }
 .my_info p {
   color: var(--white_color);
@@ -531,7 +571,7 @@ body::-webkit-scrollbar-thumb,
   -ms-flex-direction: column;
   flex-direction: column;
   color: var(--white_color);
-  background-color: var(--secondary_color);
+  background-color: var(--main_color);
   height: 100%;
   padding: 0.8rem;
 }
@@ -601,13 +641,13 @@ body::-webkit-scrollbar-thumb,
 }
 .resume-title {
   margin-bottom: 1.5rem;
-  color: var(--secondary_color);
+  color: var(--main_color);
 }
 .resume-body {
   position: relative;
   margin-bottom: 1.5rem;
   padding-left: 1rem;
-  border-left: 3px solid var(--secondary_color);
+  border-left: 3px solid var(--main_color);
   color: var(--white_color);
 }
 .resume-body::after {
@@ -617,12 +657,12 @@ body::-webkit-scrollbar-thumb,
   left: -8px;
   width: 15px;
   height: 15px;
-  background: #000;
+  background: var(--black_color);
   border-radius: 50%;
-  border: 3px solid var(--secondary_color);
+  border: 3px solid var(--main_color);
 }
 .resume-body h4 {
-  color: var(--secondary_color);
+  color: var(--main_color);
   font-size: 1.12rem;
   font-weight: bold;
 }
@@ -643,7 +683,7 @@ body::-webkit-scrollbar-thumb,
   width: -moz-fit-content;
   width: -webkit-fit-content;
   width: fit-content;
-  background-color: var(--secondary_color);
+  background-color: var(--main_color);
   color: var(--white_color);
   -webkit-transition: color 0.5s, background-color 0.5s;
   -o-transition: color 0.5s, background-color 0.5s;
@@ -653,7 +693,7 @@ body::-webkit-scrollbar-thumb,
 .resume-body .ul_movie a:hover,
 .resume-body .ul_note a:hover {
   background-color: var(--white_color);
-  color: var(--secondary_color);
+  color: var(--main_color);
 }
 .resume-body p {
   margin-bottom: 1rem;
@@ -662,7 +702,7 @@ body::-webkit-scrollbar-thumb,
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  background-color: var(--secondary_color);
+  background-color: var(--main_color);
   font-weight: 500;
   color: var(--white_color);
   margin: 5px 0;
@@ -691,17 +731,17 @@ body::-webkit-scrollbar-thumb,
   margin: 4px;
   padding: 7px 0 !important;
   border-radius: 0 !important;
-  background-color: var(--secondary_color) !important;
+  background-color: var(--main_color) !important;
   -webkit-transition: background-color 0.3s, color 0.3s;
   -o-transition: background-color 0.3s, color 0.3s;
   transition: background-color 0.3s, color 0.3s;
 }
 .nav-link:hover {
   background-color: var(--white_color) !important;
-  color: var(--secondary_color);
+  color: var(--main_color);
 }
 .nav-link.active {
-  color: var(--secondary_color) !important;
+  color: var(--main_color) !important;
   background-color: var(--white_color) !important;
 }
 /* End */
@@ -728,7 +768,7 @@ body::-webkit-scrollbar-thumb,
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: rgb(0, 0, 0, 0.7);
+  background-color: var(--black_50_color);
   -webkit-transition: opacity 0.3s;
   -o-transition: opacity 0.3s;
   transition: opacity 0.3s;
@@ -738,7 +778,7 @@ body::-webkit-scrollbar-thumb,
   color: var(--white_color);
   font-size: 20px;
   padding: 10px 15px;
-  background-color: var(--secondary_color);
+  background-color: var(--main_color);
   cursor: pointer;
   margin: 2px;
   -webkit-transition: all 0.3s;
@@ -747,12 +787,12 @@ body::-webkit-scrollbar-thumb,
 }
 .plus i:hover,
 .pro-link i:hover {
-  color: var(--secondary_color);
+  color: var(--main_color);
   background-color: var(--white_color);
 }
 .item-img:hover {
-  -webkit-box-shadow: 0px 0px 5px 7px var(--secondary_color);
-  box-shadow: 0px 0px 5px 7px var(--secondary_color);
+  -webkit-box-shadow: 0px 0px 5px 7px var(--main_color);
+  box-shadow: 0px 0px 5px 7px var(--main_color);
 }
 .item-img:hover .img-info {
   opacity: 1;
@@ -784,7 +824,7 @@ body::-webkit-scrollbar-thumb,
 }
 .modal-tools .fa-angle-left,
 .modal-tools .fa-angle-right {
-  background: #62330c;
+  background: var(--secondary_color);
   width: 35px;
   height: 35px;
   margin: 10px;
@@ -856,7 +896,7 @@ body::-webkit-scrollbar-thumb,
   left: 0;
   width: 7px;
   height: 100%;
-  background-color: var(--secondary_color);
+  background-color: var(--main_color);
   -webkit-transition: width 0.3s ease-in-out;
   -o-transition: width 0.3s ease-in-out;
   transition: width 0.3s ease-in-out;
@@ -881,7 +921,7 @@ body::-webkit-scrollbar-thumb,
   height: 35px;
   line-height: 35px;
   z-index: 99999;
-  background-color: var(--secondary_color);
+  background-color: var(--main_color);
   -webkit-transition: background-color 0.3s;
   -o-transition: background-color 0.3s;
   transition: background-color 0.3s;
@@ -896,6 +936,6 @@ body::-webkit-scrollbar-thumb,
   background-color: var(--white_color);
 }
 #btnUp:hover i {
-  color: var(--secondary_color);
+  color: var(--main_color);
 }
 /*********************** End Btn_Up ********************/
