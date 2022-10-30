@@ -72,7 +72,7 @@ let My_social = document.querySelector('.My_social');
 My_social.addEventListener('click', function(e) {
     e.currentTarget.classList.add('active');
 
-    if(e.target.hasAttribute('href') || e.target.classList.contains('fas') || e.target.classList.contains('fab')){
+    if(e.target.hasAttribute('href') || e.target.classList.contains('fas')){
         e.currentTarget.classList.remove('active');
     }
 });
