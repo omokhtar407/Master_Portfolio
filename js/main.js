@@ -103,6 +103,7 @@ $(window).scroll(function() {
         Jquery = document.querySelector('.Jquery'),
         bootstrab = document.querySelector('.bootstrab'),
         Angular = document.querySelector('.Angular'),
+        Angular_Material = document.querySelector('.Angular_Material'),
         sass = document.querySelector('.sass'),
         Ajax_json = document.querySelector('.Ajax-json'),
         github = document.querySelector('.github');
@@ -159,6 +160,14 @@ $(window).scroll(function() {
 
         new EasyPieChart(Angular, {
             barColor: 'red',
+            lineWidth: 10,
+            trackColor: '#000',
+            trackWidth: 10,
+            lineCap: 'round'
+        });
+
+        new EasyPieChart(Angular_Material, {
+            barColor: '#3f51b5',
             lineWidth: 10,
             trackColor: '#000',
             trackWidth: 10,

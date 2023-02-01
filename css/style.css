@@ -673,25 +673,23 @@ color:#454444;
   list-style-type: disc;
   list-style-position: inside;
 }
-.resume-body .ul_bloodBank a,
-.resume-body .ul_movie a,
-.resume-body .ul_note a {
+.resume-body .ul_bloodBank a{
   display: block;
-  margin-top: 5px;
   padding: 5px 10px;
   font-weight: 600;
   width: -moz-fit-content;
   width: -webkit-fit-content;
   width: fit-content;
+  margin: 5px 2px;
   background-color: var(--main_color);
   color: var(--white_color);
   -webkit-transition: color 0.5s, background-color 0.5s;
   -o-transition: color 0.5s, background-color 0.5s;
   transition: color 0.5s, background-color 0.5s;
+  -moz-transition: color 0.5s, background-color 0.5s;
+  -ms-transition: color 0.5s, background-color 0.5s;
 }
-.resume-body .ul_bloodBank a:hover,
-.resume-body .ul_movie a:hover,
-.resume-body .ul_note a:hover {
+.resume-body .ul_bloodBank a:hover {
   background-color: var(--white_color);
   color: var(--main_color);
 }
@@ -749,8 +747,14 @@ color:#454444;
 /* Start tab-work-pane */
 .item-img {
   position: relative;
+  height: 300px;
+  width: 100%;
+  border: 10px solid var(--main_color);
+  border-radius: 5px;
 }
 .item-img img {
+  height: 100%;
+  width: 100%;
   -webkit-transition: all 0.5s;
   -o-transition: all 0.5s;
   transition: all 0.5s;
@@ -768,7 +772,6 @@ color:#454444;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: var(--black_50_color);
   -webkit-transition: opacity 0.3s;
   -o-transition: opacity 0.3s;
   transition: opacity 0.3s;
@@ -793,6 +796,9 @@ color:#454444;
 .item-img:hover {
   -webkit-box-shadow: 0px 0px 5px 7px var(--main_color);
   box-shadow: 0px 0px 5px 7px var(--main_color);
+}
+.item-img:hover img {
+  opacity: 0.3;
 }
 .item-img:hover .img-info {
   opacity: 1;
