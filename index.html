@@ -11,23 +11,15 @@
     <!-- ----------------------------------- End My Meta ----------------------------------- -->
 
     <title>El MoKhTaR</title>
-    <base target="_blank">
+    <base target="_blank" />
 
     <!-- ----------------------------------- Start My Links ----------------------------------- -->
     <link rel="icon" href="imgs/favicon.png" />
     <!-- Aos plugin -->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <!-- Google Fonts -->
-    <link
-      href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Amiri&family=Cairo&family=Kaushan+Script&family=Patrick+Hand&family=Readex+Pro&display=swap"
-      rel="stylesheet"
-    />
     <!-- Font Awesome -->
     <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/sweetalert2.min.css">
     <!-- Bootstrap -->
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <!-- Main Css File -->
@@ -36,9 +28,9 @@
   </head>
 
   <body>
-
     <!-- ----------------------------------- Start Loading ----------------------------------- -->
     <div class="loading">
+      <div class="bg-load"></div>
       <div class="my-logo">
         <div class="content">
           <img src="imgs/favicon.png" alt="Eagle_logo" />
@@ -46,78 +38,128 @@
       </div>
     </div>
     <!-- ----------------------------------- End Loading ----------------------------------- -->
-
+    <!-- Start Header -->
+    <header id="header">
+      <div class="logo">
+        <img src="imgs/logo.png" alt="logo" />
+      </div>
+      <nav class="main-nav d-md-flex d-none">
+        <ul class="ul-nav">
+          <li>
+            <a href="#Main_Slider" target="_self"> Home </a>
+          </li>
+          <li>
+            <a href="#About_Me" target="_self"> About Me </a>
+          </li>
+          <li>
+            <a href="#Services" target="_self"> Services </a>
+          </li>
+          <li>
+            <a href="#Skills" target="_self"> Skills </a>
+          </li>
+          <li>
+            <a href="#Resume" target="_self"> Resume </a>
+          </li>
+          <li>
+            <a href="#MyWorks" target="_self"> My Works </a>
+          </li>
+        </ul>
+      </nav>
+      <div class="contact d-md-flex d-none">
+        <a class="button" href="#ContactMe" target="_self">
+          Let's Talk
+          <span></span>
+        </a>
+      </div>
+      <div class="menu d-md-none d-block">
+        <i class="fad fa-bars fa-3x m-1"></i>
+        <i class="fad fa-times fa-3x m-1 d-non"></i>
+      </div>
+    </header>
+    <div class="main-nav-phone d-md-none d-grid">
+      <ul class="ul-nav phone">
+        <li>
+          <a href="#Main_Slider" target="_self"> Home </a>
+        </li>
+        <li>
+          <a href="#About_Me" target="_self"> About Me </a>
+        </li>
+        <li>
+          <a href="#Services" target="_self"> Services </a>
+        </li>
+        <li>
+          <a href="#Skills" target="_self"> Skills </a>
+        </li>
+        <li>
+          <a href="#Resume" target="_self"> Resume </a>
+        </li>
+        <li>
+          <a href="#MyWorks" target="_self"> My Works </a>
+        </li>
+      </ul>
+      <div class="line">My Social</div>
+      <ul class="ul-nav social">
+        <li>
+          <a
+            href="https://www.linkedin.com/in/omar-mokhtar-737536200"
+            target="_blank"
+            ><img src="imgs/Web img_icons/linkedin.png" alt="linkedin.png"
+          /></a>
+        </li>
+        <li>
+          <a href="http://wa.me/+201145466042" target="_blank">
+            <img src="imgs/Web img_icons/whatsapp.png" alt="whatsapp.png" />
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://www.facebook.com/profile.php?id=100028305347519"
+            target="_blank"
+          >
+            <img src="imgs/Web img_icons/facebook.png" alt="facebook.png" />
+          </a>
+        </li>
+        <li>
+          <a href="mailto:omokhtar407@gmail.com" target="_blank"
+            ><img src="imgs/Web img_icons/gmail.png" alt="gmail.png"
+          /></a>
+        </li>
+        <li>
+          <a href="https://github.com/omokhtar407" target="_blank">
+            <img src="imgs/Web img_icons/github.png" alt="github" />
+          </a>
+        </li>
+      </ul>
+    </div>
+    <!-- End Header -->
     <!-- ----------------------------------- Start Main Slider ----------------------------------- -->
-    <header id="Main_Slider">
+    <section id="Main_Slider">
+      <div class="circle-1"></div>
+      <div class="circle-2"></div>
+      <div class="square-1"></div>
+      <div class="square-2"></div>
+
       <div class="container slider_content">
-        <div class="row">
-          <div class="col">
-            <div class="my-img">
-              <div class="content">
-                <img src="imgs/myImg_load.jpg" alt="Omar_Mokhtar_img" />
-              </div>
-            </div>
+        <div class="row justify-content-center align-items-center">
+          <div class="col-md-6">
             <div class="My_name">
-              <h1>omar mokhtar</h1>
-              <h2>i'm <span class="typed"></span></h2>
+              <span>Hello, I'm a</span>
+              <h1><span class="typed"></span></h1>
+              <p>
+                Hi I'm Omar Mokhtar, a passionate Front-End Developer. Welcome
+                to portfolio world.
+              </p>
+              <a class="button mt-4" href="#About_Me" target="_self">
+                View Portfolio
+                <span></span>
+              </a>
             </div>
           </div>
-        </div>
-
-        <div class="My_sections">
-          <ul>
-            <li>
-              <span>About Me</span>
-              <div class="icons">
-                <a href="#About_Me" target="_self">
-                  <i class="fas fa-user-alt fa-fw"></i>
-                </a>
-              </div>
-            </li>
-            <li>
-              <span>Skills</span>
-              <div class="icons">
-                <a href="#Skills" target="_self">
-                  <i class="fas fa-feather-alt fa-fw"></i>
-                </a>
-              </div>
-            </li>
-            <li>
-              <span>Resume</span>
-              <div class="icons">
-                <a href="#Resume" target="_self">
-                  <i class="fas fa-file-alt fa-fw"></i>
-                </a>
-              </div>
-            </li>
-            <li>
-              <span>My Works</span>
-              <div class="icons">
-                <a href="#MyWorks" target="_self">
-                  <i class="fas fa-book fa-fw"></i>
-                </a>
-              </div>
-            </li>
-            <li>
-              <span>Services</span>
-              <div class="icons">
-                <a href="#Services" target="_self">
-                  <i class="fas fa-server fa-fw"></i>
-                </a>
-              </div>
-            </li>
-            <li>
-              <span>Download Cv</span>
-              <div class="icons">
-                <a
-                  href="https://drive.google.com/file/d/1np9SzljCZk8RIcQrpGs9PBqBoA3DmAZL/view?usp=share_link"
-                  download
-                >
-                  <i class="fas fa-download fa-fw"></i>
-                </a>
-              </div>
-            </li>
-          </ul>
+          <div class="col-md-6">
+            <div class="my-img">
+              <img src="imgs/black.png" alt="Omar_Mokhtar_img" />
+            </div>
+          </div>
         </div>
       </div>
 
@@ -138,7 +180,7 @@
           ></a>
         </span>
         <span style="--i: 2; --x: -1; --y: 1">
-          <a href="mailto:omarmokhar363@gmail.com" target="_blank"
+          <a href="mailto:omokhtar407@gmail.com" target="_blank"
             ><i class="fas fa-envelope-square"></i
           ></a>
         </span>
@@ -148,11 +190,14 @@
           ></a>
         </span>
       </nav>
-    </header>
+    </section>
     <!-- ----------------------------------- End Main Slider ----------------------------------- -->
 
     <!-- ----------------------------------- Start About Me ----------------------------------- -->
-    <section id="About_Me">
+    <section id="About_Me" class="position-relative">
+      <div class="circle-1"></div>
+      <div class="circle-2"></div>
+      <div class="square-1"></div>
       <div class="container">
         <div
           class="Master_Head"
@@ -172,101 +217,41 @@
           </div>
         </div>
         <div class="row g-3 mt-4">
-          <div class="col-lg-4">
-            <div
-              class="my_img"
-              data-aos="fade-right"
-              data-aos-duration="1000"
-              data-aos-offset="300"
-              data-aos-easing="ease-in-sine"
-            >
-              <img src="imgs/myImg.jpg" alt="Omar_Mokhtar_img" />
+          <div class="col-md-6">
+            <div class="my_img me-4" data-aos="fade-right">
+              <img src="imgs/aboutMe-black.png" alt="Omar_Mokhtar_img" />
             </div>
           </div>
-          <div class="col-lg-7 offset-lg-1">
-            <div
-              class="my_info"
-              data-aos="fade-left"
-              data-aos-duration="1000"
-              data-aos-offset="300"
-              data-aos-easing="ease-in-sine"
-            >
-              <div class="my_name">
+          <div class="col-md-6">
+            <div class="my_info">
+              <div class="sub_info_aboutme" data-aos="fade-left">
                 <h3>
                   omar <br />
                   mokhtar Abdullah
                 </h3>
+                <p>
+                  Iʼm a front-end developer with experience in building and
+                  maintaining responsive websites. I'm a graduate of the College
+                  of Computers and Artificial Intelligence. Now, i'm working as
+                  a junior web developer.
+                </p>
               </div>
+              <div class="sub_info_contact" data-aos="fade-left">
+                <h3>Contact</h3>
+                <p>
+                  Do you fancy hi to me or you want to get started with your
+                  project and you need my help? Feel free to contact me. <br />
+                  <span class="fw-bold">omokhtar407@gmail.com</span>
+                </p>
 
-              <p>
-                Iʼm a Junior front-end developer with experience in building and
-                maintaining responsive websites. I'm a graduate of the College
-                of Computers and Artificial Intelligence. I'm working with Html
-                5, Css3, JavaScript, TypeScript, Sass, Angular Material,
-                Frameworks (Angular) and Bootstrap 5, Library like jQuery. I
-                worked with plugins like ( Owl Carousel.js, Swipper.js, Slick.js
-                MixItUp, Wow.js, Aos.js, and SweetAlert ....). I have Knowledge
-                of Apis, Regular Expression, AJAX, and JSON.
-              </p>
-
-              <div class="sub_info">
-                <div class="row g-4">
-                  <div class="col-12">
-                    <div
-                      class="info_inner"
-                      data-aos="fade-up"
-                      data-aos-offset="100"
-                      data-aos-duration="1000"
-                      data-aos-anchor-placement="top-bottom"
-                    >
-                      <i class="fad fa-envelope-square"></i>
-                      <span>Gmail</span>
-                      <span>omokhtar407@gmail.com</span>
-                    </div>
-                  </div>
-
-                  <div class="col">
-                    <div
-                      class="info_inner"
-                      data-aos="fade-up"
-                      data-aos-offset="100"
-                      data-aos-duration="1000"
-                      data-aos-anchor-placement="top-bottom"
-                    >
-                      <i class="fad fa-mobile-alt"></i>
-                      <span>Phone</span>
-                      <span>01145466042</span>
-                    </div>
-                  </div>
-
-                  <div class="col">
-                    <div
-                      class="info_inner"
-                      data-aos="fade-up"
-                      data-aos-offset="100"
-                      data-aos-duration="1400"
-                      data-aos-anchor-placement="top-bottom"
-                    >
-                      <i class="fad fa-map-marker-alt"></i>
-                      <span>Location</span>
-                      <span>Egypt, Qaliub</span>
-                    </div>
-                  </div>
-
-                  <div class="col">
-                    <div
-                      class="info_inner"
-                      data-aos="fade-up"
-                      data-aos-offset="100"
-                      data-aos-duration="1800"
-                      data-aos-anchor-placement="top-bottom"
-                    >
-                      <i class="fad fa-birthday-cake"></i>
-                      <span>Birthday</span>
-                      <span>22 / 2 / 2000</span>
-                    </div>
-                  </div>
-                </div>
+                <a
+                  class="button"
+                  href="https://drive.google.com/file/d/1np9SzljCZk8RIcQrpGs9PBqBoA3DmAZL/view?usp=share_link"
+                  download
+                >
+                  Download CV
+                  <span></span>
+                </a>
               </div>
             </div>
           </div>
@@ -275,16 +260,94 @@
     </section>
     <!-- ----------------------------------- End About Me ----------------------------------- -->
 
-    <!-- ----------------------------------- Start Skills ----------------------------------- -->
-    <section id="Skills">
+    <!-- ----------------------------------- Start Services ------------------------------------->
+    <section id="Services" class="position-relative">
       <div class="container">
-        <div
-          class="Master_Head"
-          data-aos="fade-up"
-          data-aos-offset="200"
-          data-aos-duration="1000"
-          data-aos-anchor-placement="top-bottom"
-        >
+        <div class="Master_Head" data-aos="fade-up">
+          <div class="head">
+            <h2>
+              My <br />
+              Services
+            </h2>
+            <div class="brd"></div>
+          </div>
+          <div class="page_num">
+            <span>05</span>
+          </div>
+        </div>
+        <div class="row g-4 mt-4 justify-content-center">
+          <div class="col-lg-4 col-sm-6">
+            <div class="service" data-aos="fade-right">
+              <i class="far fa-code"></i>
+              <div class="ser-info">
+                <h5>Website Development</h5>
+                <small>12 Projects</small>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-sm-6">
+            <div class="service" data-aos="fade-down">
+              <i class="far fa-browser"></i>
+              <div class="ser-info">
+                <h5>Responsive Design</h5>
+                <small>11 Projects</small>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-sm-6">
+            <div class="service" data-aos="fade-left">
+              <i class="far fa-brackets"></i>
+              <div class="ser-info">
+                <h5>Clean Code</h5>
+                <small>8 Projects</small>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-sm-6">
+            <div class="service" data-aos="fade-right">
+              <i class="far fa-shopping-cart"></i>
+              <div class="ser-info">
+                <h5>ECommerce Development</h5>
+                <small>1 Projects</small>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-sm-6">
+            <div class="service" data-aos="fade-up">
+              <i class="far fa-user"></i>
+              <div class="ser-info">
+                <h5>User Experience</h5>
+                <small>5 Projects</small>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-sm-6">
+            <div class="service" data-aos="fade-left">
+              <i class="far fa-palette"></i>
+              <div class="ser-info">
+                <h5>Website Designing</h5>
+                <small>1 Projects</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ----------------------------------- End Services ------------------------------------->
+
+    <!-- ----------------------------------- Start Skills ----------------------------------- -->
+    <section id="Skills" class="position-relative">
+      <div class="circle-1"></div>
+      <div class="circle-2"></div>
+      <div class="square-1"></div>
+      <div class="square-2"></div>
+      <div class="container">
+        <div class="Master_Head" data-aos="fade-up">
           <div class="head">
             <h2>
               My <br />
@@ -297,157 +360,100 @@
           </div>
         </div>
         <div class="row g-4 mt-5 justify-content-center">
-          <div class="col-md-3 col-sm-6">
-            <div
-              class="chart html"
-              data-percent="95"
-              data-aos="fade-up"
-              data-aos-offset="300"
-              data-aos-duration="1000"
-              data-aos-anchor-placement="top-bottom"
-            >
-              <span class="percent">95%</span>
-              <span class="label">Html5</span>
+          <div class="col-md-8" data-aos="fade-left">
+            <h3>My Skills</h3>
+            <div class="skills-container">
+              <div class="skill_box text-center">
+                <img src="imgs/Web img_icons/html-icon.png" alt="html-icon" />
+              </div>
+              <div class="skill_box text-center">
+                <img src="imgs/Web img_icons/css-icon.png" alt="css-icon" />
+              </div>
+              <div class="skill_box text-center">
+                <img src="imgs/Web img_icons/js.png" alt="js.png" />
+              </div>
+              <div class="skill_box text-center">
+                <img
+                  src="imgs/Web img_icons/bootstrap.png"
+                  alt="bootstrap.png"
+                />
+              </div>
+              <div class="skill_box text-center">
+                <img src="imgs/Web img_icons/jquery.png" alt="jquery.png" />
+              </div>
+              <div class="skill_box text-center">
+                <img
+                  src="imgs/Web img_icons/angular-icon.png"
+                  alt="angular-icon.png"
+                />
+              </div>
+              <div class="skill_box text-center">
+                <img
+                  src="imgs/Web img_icons/angular-material.png"
+                  alt="angular-material.png"
+                />
+              </div>
+              <div class="skill_box text-center">
+                <img
+                  src="imgs/Web img_icons/typescript.png"
+                  alt="typescript.png"
+                />
+              </div>
+              <div class="skill_box text-center">
+                <img src="imgs/Web img_icons/npm.png" alt="npm.png" />
+              </div>
+              <div class="skill_box text-center">
+                <img src="imgs/Web img_icons/sass.png" alt="sass.png" />
+              </div>
+              <div class="skill_box text-center">
+                <img src="imgs/Web img_icons/git.png" alt="git.png" />
+              </div>
+              <div class="skill_box text-center">
+                <img src="imgs/Web img_icons/gtihub.png" alt="github.png" />
+              </div>
+              <div class="skill_box text-center">
+                <img src="imgs/Web img_icons/python.png" alt="python.png" />
+              </div>
+              <div class="skill_box text-center">
+                <img src="imgs/Web img_icons/c++.png" alt="c++.png" />
+              </div>
+              <div class="skill_box text-center">
+                <img src="imgs/Web img_icons/mysql.png" alt="mysql.png" />
+              </div>
             </div>
           </div>
-
-          <div class="col-md-3 col-sm-6">
-            <div
-              class="chart css"
-              data-percent="92"
-              data-aos="fade-up"
-              data-aos-offset="300"
-              data-aos-duration="1400"
-              data-aos-anchor-placement="top-bottom"
-            >
-              <span class="percent">92%</span>
-              <span class="label">Css3</span>
+          <div class="col-md-8" data-aos="fade-right">
+            <h3>Current Learning</h3>
+            <div class="skills-container">
+              <div class="skill_box text-center">
+                <img src="imgs/Web img_icons/flutter.png" alt="flutter" />
+              </div>
+              <div class="skill_box text-center">
+                <img src="imgs/Web img_icons/dart.png" alt="dart" />
+              </div>
             </div>
           </div>
-
-          <div class="col-md-3 col-sm-6">
-            <div
-              class="chart js"
-              data-percent="85"
-              data-aos="fade-up"
-              data-aos-offset="300"
-              data-aos-duration="1800"
-              data-aos-anchor-placement="top-bottom"
-            >
-              <span class="percent">85%</span>
-              <span class="label">JavaScript</span>
-            </div>
-          </div>
-
-          <div class="col-md-3 col-sm-6">
-            <div
-              class="chart ts"
-              data-percent="85"
-              data-aos="fade-up"
-              data-aos-offset="300"
-              data-aos-duration="2200"
-              data-aos-anchor-placement="top-bottom"
-            >
-              <span class="percent">80%</span>
-              <span class="label">TypeScript</span>
-            </div>
-          </div>
-
-          <div class="col-md-3 col-sm-6">
-            <div
-              class="chart Jquery"
-              data-percent="100"
-              data-aos="fade-up"
-              data-aos-offset="300"
-              data-aos-duration="2600"
-              data-aos-anchor-placement="top-bottom"
-            >
-              <span class="percent">100%</span>
-              <span class="label">Jquery</span>
-            </div>
-          </div>
-
-          <div class="col-md-3 col-sm-6">
-            <div
-              class="chart bootstrab"
-              data-percent="90"
-              data-aos="fade-up"
-              data-aos-offset="300"
-              data-aos-duration="1000"
-              data-aos-anchor-placement="top-bottom"
-            >
-              <span class="percent">90%</span>
-              <span class="label">Bootstrab 5</span>
-            </div>
-          </div>
-
-          <div class="col-md-3 col-sm-6">
-            <div
-              class="chart Angular"
-              data-percent="80"
-              data-aos="fade-up"
-              data-aos-offset="300"
-              data-aos-duration="1400"
-              data-aos-anchor-placement="top-bottom"
-            >
-              <span class="percent">85%</span>
-              <span class="label">Angular</span>
-            </div>
-          </div>
-
-          <div class="col-md-3 col-sm-6">
-            <div
-              class="chart Angular_Material"
-              data-percent="82"
-              data-aos="fade-up"
-              data-aos-offset="300"
-              data-aos-duration="1800"
-              data-aos-anchor-placement="top-bottom"
-            >
-              <span class="percent">82%</span>
-              <span class="label">Angular Material</span>
-            </div>
-          </div>
-
-          <div class="col-md-3 col-sm-6">
-            <div
-              class="chart sass"
-              data-percent="93"
-              data-aos="fade-up"
-              data-aos-offset="300"
-              data-aos-duration="2200"
-              data-aos-anchor-placement="top-bottom"
-            >
-              <span class="percent">93%</span>
-              <span class="label">Sass</span>
-            </div>
-          </div>
-
-          <div class="col-md-3 col-sm-6">
-            <div
-              class="chart Ajax-json"
-              data-percent="95"
-              data-aos="fade-up"
-              data-aos-offset="300"
-              data-aos-duration="2600"
-              data-aos-anchor-placement="top-bottom"
-            >
-              <span class="percent">95%</span>
-              <span class="label">Ajax & Json</span>
-            </div>
-          </div>
-
-          <div class="col-md-3 col-sm-6">
-            <div
-              class="chart github"
-              data-percent="85"
-              data-aos="fade-up"
-              data-aos-offset="300"
-              data-aos-duration="3000"
-              data-aos-anchor-placement="top-bottom"
-            >
-              <span class="percent">85%</span>
-              <span class="label">Git & GitHub</span>
+          <div class="col-md-8" data-aos="fade-up">
+            <h3>Next Steps</h3>
+            <div class="skills-container">
+              <div class="skill_box text-center">
+                <img src="imgs/Web img_icons/react.png" alt="react.png" />
+              </div>
+              <div class="skill_box text-center">
+                <img src="imgs/Web img_icons/redux.png" alt="redux.png" />
+              </div>
+              <div class="skill_box text-center">
+                <img src="imgs/Web img_icons/nuxt-js.png" alt="nuxt-js.png" />
+              </div>
+              <div class="skill_box text-center">
+                <img src="imgs/Web img_icons/nodejs.png" alt="nodejs.png" />
+              </div>
+              <div class="skill_box text-center">
+                <img src="imgs/Web img_icons/mongodb.png" alt="mongodb.png" />
+              </div>
+              <div class="skill_box text-center">
+                <img src="imgs/Web img_icons/express.png" alt="express.png" />
+              </div>
             </div>
           </div>
         </div>
@@ -456,15 +462,13 @@
     <!-- ----------------------------------- End Skills ----------------------------------- -->
 
     <!-- ----------------------------------- Start Resume ----------------------------------- -->
-    <section id="Resume">
+    <section id="Resume" class="position-relative">
+      <div class="circle-1"></div>
+      <div class="circle-2"></div>
+      <div class="square-1"></div>
+      <div class="square-2"></div>
       <div class="container">
-        <div
-          class="Master_Head"
-          data-aos="fade-up"
-          data-aos-offset="200"
-          data-aos-duration="1000"
-          data-aos-anchor-placement="top-bottom"
-        >
+        <div class="Master_Head" data-aos="fade-up">
           <div class="head">
             <h2>
               My <br />
@@ -480,18 +484,8 @@
         <div class="row g-4 mt-4">
           <div class="col-lg-6">
             <div class="First_Part">
-              <div
-                class="resume-info"
-                data-aos="fade-right"
-                data-aos-duration="1000"
-                data-aos-offset="300"
-                data-aos-easing="ease-in-sine"
-              >
-                <div
-                  data-aos="fade-right"
-                  data-aos-duration="1000"
-                  data-aos-easing="ease-in-sine"
-                >
+              <div class="resume-info" data-aos="fade-right">
+                <div data-aos="fade-right">
                   <h3 class="resume-title">Sumary</h3>
                   <div class="resume-body">
                     <h4>Omar Mokhtar Abdulluh</h4>
@@ -511,7 +505,7 @@
                       </li>
                       <li>
                         <i class="fad fa-mobile-alt fa-fw me-1 mb-2"></i>
-                        01145466042
+                        01145466042 / 01029096569
                       </li>
                       <li>
                         <i class="fad fa-envelope-square fa-fw me-1"></i>
@@ -521,11 +515,7 @@
                   </div>
                 </div>
 
-                <div
-                  data-aos="fade-right"
-                  data-aos-duration="1000"
-                  data-aos-easing="ease-in-sine"
-                >
+                <div data-aos="fade-right">
                   <h3 class="resume-title">Education</h3>
                   <div class="resume-body">
                     <h4>Bachelor Degree</h4>
@@ -536,35 +526,27 @@
                       >Benha Faculty of computer and Artificial Intelligence,
                       Benha</em
                     >
-                    <p >
-                        <strong>Department:-</strong> IS. <br>
-                        <strong>Degree:-</strong> Very good with honor (B+ 83.6%). <br>
-                        <strong>Graduation Project Degree:-</strong> Excellent.
+                    <p>
+                      <strong>Department:-</strong> IS. <br />
+                      <strong>Degree:-</strong> Very good with honor (B+ 83.6%).
+                      <br />
+                      <strong>Graduation Project Degree:-</strong> Excellent.
                     </p>
                   </div>
                 </div>
 
-                <div
-                  data-aos="fade-right"
-                  data-aos-duration="1000"
-                  data-aos-offset="300"
-                  data-aos-easing="ease-in-sine"
-                >
+                <div data-aos="fade-right">
                   <h3 class="resume-title">Professional Experience</h3>
                   <div class="resume-body">
-                      <h4>Teaching Assistant</h4>
-                      <em>at BFCAI, Benha University</em>
-                      <span class="d-block py-1 px-2 fst-italic"
+                    <h4>Teaching Assistant</h4>
+                    <em>at BFCAI, Benha University</em>
+                    <span class="d-block py-1 px-2 fst-italic"
                       >Nov 2022 - Present</span
                     >
                   </div>
                 </div>
 
-                <div
-                  data-aos="fade-right"
-                  data-aos-duration="1000"
-                  data-aos-easing="ease-in-sine"
-                >
+                <div data-aos="fade-right">
                   <h3 class="resume-title">Certificates</h3>
                   <div class="resume-body">
                     <h4>Front End Web Development Diploma</h4>
@@ -574,28 +556,16 @@
                     >
                   </div>
                 </div>
-
               </div>
             </div>
           </div>
           <div class="col-lg-6">
             <div class="Sec_Part">
-              <div
-                class="resume-info"
-                data-aos="fade-left"
-                data-aos-duration="1000"
-                data-aos-offset="300"
-                data-aos-easing="ease-in-sine"
-              >
-                <div
-                  data-aos="fade-left"
-                  data-aos-duration="1800"
-                  data-aos-offset="300"
-                  data-aos-easing="ease-in-sine"
-                >
+              <div class="resume-info" data-aos="fade-left">
+                <div data-aos="fade-left">
                   <h3 class="resume-title">Projects</h3>
                   <div class="resume-body">
-                    <div class="mb-4">
+                    <div class="mb-4" data-aos="fade-left">
                       <h4>MovieDB</h4>
                       <em>Movie & Series</em>
                       <ul class="ul_bloodBank">
@@ -603,38 +573,47 @@
                           <strong>Using :-</strong> Framework | Angular.
                           <div class="d-flex flex-wrap">
                             <a
+                              class="button"
                               href="https://omokhtar407.github.io/MovieBox_Angular/"
-                              >View Website</a
-                            >
+                              >Demo
+                              <span></span>
+                            </a>
                             <a
+                              class="button"
                               href="https://github.com/omokhtar407/Movies_Angular_Code.git"
-                              >View Code</a
-                            >
+                              >View Code
+                              <span></span>
+                            </a>
                           </div>
                         </li>
                       </ul>
                     </div>
 
-                    <div class="mb-4">
+                    <div class="mb-4" data-aos="fade-left">
                       <h4>E-commerce</h4>
                       <em>Silton</em>
                       <ul class="ul_bloodBank">
                         <li>
                           <strong>Using :-</strong> Framework | Angular.
                           <div class="d-flex flex-wrap">
-                            <a href="https://omokhtar407.github.io/Silton/"
-                              >View Website</a
-                            >
                             <a
+                              class="button"
+                              href="https://omokhtar407.github.io/Silton/"
+                              >Demo
+                              <span></span>
+                            </a>
+                            <a
+                              class="button"
                               href="https://github.com/omokhtar407/Silton_Shop_Code.git"
-                              >View Code</a
-                            >
+                              >View Code
+                              <span></span>
+                            </a>
                           </div>
                         </li>
                       </ul>
                     </div>
 
-                    <div class="mb-4">
+                    <div class="mb-4" data-aos="fade-left">
                       <h4>Crud Operation</h4>
                       <em>Online Tasks ( Admin | User )</em>
                       <ul class="ul_bloodBank">
@@ -643,17 +622,23 @@
                           Angular Material .
                           <div class="d-flex flex-wrap">
                             <a
+                              class="button"
                               href="https://omokhtar407.github.io/Online-Tasks-Admin/"
-                              >View Admin</a
-                            >
+                              >View Admin
+                              <span></span>
+                            </a>
                             <a
+                              class="button"
                               href="https://omokhtar407.github.io/Online-Tasks-User/"
-                              >View User</a
-                            >
+                              >View User
+                              <span></span>
+                            </a>
                             <a
+                              class="button"
                               href="https://github.com/omokhtar407/online-tasks-FE.git"
-                              >View Code</a
-                            >
+                              >View Code
+                              <span></span>
+                            </a>
                           </div>
                         </li>
                       </ul>
@@ -664,51 +649,65 @@
                           <strong>Using :-</strong> Framework | Angular.
                           <div class="d-flex flex-wrap">
                             <a
+                              class="button"
                               href="https://omokhtar407.github.io/StorexWeb_Movies/"
-                              >View Website</a
-                            >
+                              >Demo
+                              <span></span>
+                            </a>
                             <a
+                              class="button"
                               href="https://github.com/omokhtar407/Storexweb_Task.git"
-                              >View Code</a
-                            >
+                              >View Code
+                              <span></span>
+                            </a>
                           </div>
                         </li>
                       </ul>
                     </div>
 
-                    <div class="mb-4">
+                    <div class="mb-4" data-aos="fade-left">
                       <h4>Graduation Project</h4>
                       <em>Blood Bank</em>
                       <ul class="ul_bloodBank">
                         <li>
-                          <strong>Using :-</strong> Html5, Css3, JavaScript,
-                          jQuery, Bootstrap 5, APIs, Owl Carousel.
-                          <a href="https://blood-bank.life/">View Website</a>
+                          <strong>Using :-</strong> Html5, Css3,
+                          JavaScript,jQuery, Bootstrap 5, APIs, Owl Carousel.
+                          <a
+                            class="button d-block"
+                            href="https://blood-bank.life/"
+                          >
+                            Demo
+                            <span></span>
+                          </a>
                         </li>
                       </ul>
                     </div>
 
-                    <div class="mb-4">
+                    <div class="mb-4" data-aos="fade-left">
                       <h4>To-Do-List</h4>
                       <em>ToDoList App</em>
                       <ul class="ul_bloodBank">
                         <li>
                           <strong>Using :-</strong> Html5, Css3, JavaScript.
                           <div class="d-flex flex-wrap">
-                            <a href="https://omokhtar407.github.io/To_Do_List/"
-                              >View Website</a
-                            >
                             <a
+                              class="button"
+                              href="https://omokhtar407.github.io/To_Do_List/"
+                              >Demo
+                              <span></span>
+                            </a>
+                            <a
+                              class="button"
                               href="https://github.com/omokhtar407/To_Do_List.git"
-                              >View Code</a
-                            >
+                              >View Code
+                              <span></span>
+                            </a>
                           </div>
                         </li>
                       </ul>
                     </div>
                   </div>
                 </div>
-
               </div>
             </div>
           </div>
@@ -718,14 +717,13 @@
     <!-- ----------------------------------- Start Resume ----------------------------------- -->
 
     <!-- ----------------------------------- Start My Works ------------------------------------->
-    <section id="MyWorks">
+    <section id="MyWorks" class="position-relative">
+      <div class="circle-1"></div>
+      <div class="circle-2"></div>
+      <div class="square-1"></div>
+      <div class="square-2"></div>
       <div class="container">
-        <div
-          class="Master_Head"
-          data-aos="fade-up"
-          data-aos-duration="1000"
-          data-aos-anchor-placement="top-bottom"
-        >
+        <div class="Master_Head" data-aos="fade-up">
           <div class="head">
             <h2>
               My <br />
@@ -739,13 +737,7 @@
         </div>
 
         <div class="row g-4 mt-4">
-          <ul
-            class="nav nav-pills"
-            data-aos="fade-up"
-            data-aos-offset="200"
-            data-aos-duration="1000"
-            data-aos-anchor-placement="top-bottom"
-          >
+          <ul class="nav nav-pills" data-aos="fade-up">
             <li class="nav-item" role="presentation">
               <button class="nav-link active" data-filter="*">All</button>
             </li>
@@ -762,46 +754,33 @@
 
           <div class="tab-work-pane">
             <div class="all-work row g-4 justify-content-center">
-
-                <div class="col-lg-3 col-md-6 mix web">
-                <div
-                    class="item-img"
-                    data-aos="fade-up"
-                    data-aos-offset="200"
-                    data-aos-duration="1000"
-                    data-aos-anchor-placement="top-bottom"
-                >
-                    <img
+              <div class="col-lg-3 col-md-6 mix web">
+                <div class="item-img" data-aos="fade-up">
+                  <img
                     src="imgs/My_Works/work_1.png"
                     class="inn-img img-fluid"
                     alt="Movies Image"
-                    />
+                  />
 
-                    <div class="img-info">
+                  <div class="img-info">
                     <span class="plus"
-                        ><i
+                      ><i
                         class="fas fa-eye"
                         data-bs-toggle="modal"
                         data-bs-target="#WorkImgs"
-                        ></i
+                      ></i
                     ></span>
                     <a
-                        class="pro-link"
-                        href="https://omokhtar407.github.io/MovieBox_Angular/"
-                        ><i class="fas fa-link"></i
+                      class="pro-link"
+                      href="https://omokhtar407.github.io/MovieBox_Angular/"
+                      ><i class="fas fa-link"></i
                     ></a>
-                    </div>
+                  </div>
                 </div>
-                </div>
+              </div>
 
-                <div class="col-lg-3 col-md-6 mix web">
-                <div
-                  class="item-img"
-                  data-aos="fade-up"
-                  data-aos-offset="200"
-                  data-aos-duration="1000"
-                  data-aos-anchor-placement="top-bottom"
-                >
+              <div class="col-lg-3 col-md-6 mix web">
+                <div class="item-img" data-aos="fade-up">
                   <img
                     src="imgs/My_Works/work_14.png"
                     class="inn-img img-fluid"
@@ -823,256 +802,207 @@
                     ></a>
                   </div>
                 </div>
-                </div>
+              </div>
 
-                <div class="col-lg-3 col-md-6 mix app crud">
-                    <div
-                    class="item-img"
-                    data-aos="fade-up"
-                    data-aos-offset="200"
-                    data-aos-duration="1200"
-                    data-aos-anchor-placement="top-bottom"
-                    >
-                    <img
-                        src="imgs/My_Works/work_2.png"
-                        class="inn-img img-fluid"
-                        alt="Sticky_Notes Image"
-                    />
-
-                    <div class="img-info">
-                        <span class="plus"
-                        ><i
-                            class="fas fa-eye"
-                            data-bs-toggle="modal"
-                            data-bs-target="#WorkImgs"
-                        ></i
-                        ></span>
-                        <a
-                        class="pro-link"
-                        href="https://omokhtar407.github.io/StorexWeb_Movies/"
-                        ><i class="fas fa-link"></i
-                        ></a>
-                    </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-6 mix app crud">
-                    <div
-                    class="item-img"
-                    data-aos="fade-up"
-                    data-aos-offset="200"
-                    data-aos-duration="1200"
-                    data-aos-anchor-placement="top-bottom"
-                    >
-                    <img
-                        src="imgs/My_Works/work_15.png"
-                        class="inn-img img-fluid"
-                        alt="Sticky_Notes Image"
-                    />
-
-                    <div class="img-info">
-                        <span class="plus"
-                        ><i
-                            class="fas fa-eye"
-                            data-bs-toggle="modal"
-                            data-bs-target="#WorkImgs"
-                        ></i
-                        ></span>
-                        <a
-                        class="pro-link"
-                        href="https://omokhtar407.github.io/Online-Tasks-User/"
-                        ><i class="fas fa-link"></i
-                        ></a>
-                    </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-6 mix app crud">
-                    <div
-                    class="item-img"
-                    data-aos="fade-up"
-                    data-aos-offset="200"
-                    data-aos-duration="1200"
-                    data-aos-anchor-placement="top-bottom"
-                    >
-                    <img
-                        src="imgs/My_Works/work_16.png"
-                        class="inn-img img-fluid"
-                        alt="Sticky_Notes Image"
-                    />
-
-                    <div class="img-info">
-                        <span class="plus"
-                        ><i
-                            class="fas fa-eye"
-                            data-bs-toggle="modal"
-                            data-bs-target="#WorkImgs"
-                        ></i
-                        ></span>
-                        <a
-                        class="pro-link"
-                        href="https://omokhtar407.github.io/Online-Tasks-Admin/"
-                        ><i class="fas fa-link"></i
-                        ></a>
-                    </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-6 mix web">
-                    <div
-                    class="item-img"
-                    data-aos="fade-up"
-                    data-aos-offset="200"
-                    data-aos-duration="1200"
-                    data-aos-anchor-placement="top-bottom"
-                    >
-                    <img
-                        src="imgs/My_Works/work_0.png"
-                        class="inn-img img-fluid"
-                        alt="Blood Bank"
-                    />
-
-                    <div class="img-info">
-                        <span class="plus"
-                        ><i
-                            class="fas fa-eye"
-                            data-bs-toggle="modal"
-                            data-bs-target="#WorkImgs"
-                        ></i
-                        ></span>
-                        <a class="pro-link" href="https://blood-bank.life/index.php"
-                        ><i class="fas fa-link"></i
-                        ></a>
-                    </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-6 mix web">
-                    <div
-                    class="item-img"
-                    data-aos="fade-up"
-                    data-aos-offset="200"
-                    data-aos-duration="1400"
-                    data-aos-anchor-placement="top-bottom"
-                    >
-                    <img
-                        src="imgs/My_Works/work_3.png"
-                        class="inn-img img-fluid"
-                        alt="Angora Image"
-                    />
-
-                    <div class="img-info">
-                        <span class="plus"
-                        ><i
-                            class="fas fa-eye"
-                            data-bs-toggle="modal"
-                            data-bs-target="#WorkImgs"
-                        ></i
-                        ></span>
-                        <a
-                        class="pro-link"
-                        href="https://omokhtar407.github.io/Angora/"
-                        ><i class="fas fa-link"></i
-                        ></a>
-                    </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-6 mix app">
-                    <div
-                    class="item-img"
-                    data-aos="fade-up"
-                    data-aos-offset="200"
-                    data-aos-duration="1400"
-                    data-aos-anchor-placement="top-bottom"
-                    >
-                    <img
-                        src="imgs/My_Works/work_4.png"
-                        class="inn-img img-fluid"
-                        alt="Weather Image"
-                    />
-
-                    <div class="img-info">
-                        <span class="plus"
-                        ><i
-                            class="fas fa-eye"
-                            data-bs-toggle="modal"
-                            data-bs-target="#WorkImgs"
-                        ></i
-                        ></span>
-                        <a
-                        class="pro-link"
-                        href="https://omokhtar407.github.io/Weather_App/"
-                        ><i class="fas fa-link"></i
-                        ></a>
-                    </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-6 mix web">
-                    <div
-                    class="item-img"
-                    data-aos="fade-up"
-                    data-aos-offset="200"
-                    data-aos-duration="1400"
-                    data-aos-anchor-placement="top-bottom"
-                    >
-                    <img
-                        src="imgs/My_Works/work_9.png"
-                        class="inn-img img-fluid"
-                        alt="Devfolio Image"
-                    />
-
-                    <div class="img-info">
-                        <span class="plus"
-                        ><i
-                            class="fas fa-eye"
-                            data-bs-toggle="modal"
-                            data-bs-target="#WorkImgs"
-                        ></i
-                        ></span>
-                        <a
-                        class="pro-link"
-                        href="https://omokhtar407.github.io/Devfolio/"
-                        ><i class="fas fa-link"></i
-                        ></a>
-                    </div>
-                    </div>
-                </div>
-
-                
-                <div class="col-lg-3 col-md-4 mix web">
-                    <div
-                    class="item-img"
-                    data-aos="fade-up"
-                    data-aos-offset="200"
-                    data-aos-duration="1600"
-                    data-aos-anchor-placement="top-bottom"
-                    >
-                <img
-                    src="imgs/My_Works/work_7.png"
+              <div class="col-lg-3 col-md-6 mix app crud">
+                <div class="item-img" data-aos="fade-up">
+                  <img
+                    src="imgs/My_Works/work_2.png"
                     class="inn-img img-fluid"
-                    alt="Mia_Italianno Image"
-                    />
-                    
-                    <div class="img-info">
-                        <span class="plus"
-                        ><i
+                    alt="Sticky_Notes Image"
+                  />
+
+                  <div class="img-info">
+                    <span class="plus"
+                      ><i
                         class="fas fa-eye"
                         data-bs-toggle="modal"
                         data-bs-target="#WorkImgs"
-                        ></i
-                        ></span>
-                        <a
-                        class="pro-link"
-                        href="https://omokhtar407.github.io/Mia_Italianno/"
-                        ><i class="fas fa-link"></i
-                            ></a>
+                      ></i
+                    ></span>
+                    <a
+                      class="pro-link"
+                      href="https://omokhtar407.github.io/StorexWeb_Movies/"
+                      ><i class="fas fa-link"></i
+                    ></a>
+                  </div>
                 </div>
-            </div>
-                </div>
+              </div>
 
-        <!-- <div class="col-lg-3 col-md-6 mix web">
+              <div class="col-lg-3 col-md-6 mix app crud">
+                <div class="item-img" data-aos="fade-up">
+                  <img
+                    src="imgs/My_Works/work_15.png"
+                    class="inn-img img-fluid"
+                    alt="Sticky_Notes Image"
+                  />
+
+                  <div class="img-info">
+                    <span class="plus"
+                      ><i
+                        class="fas fa-eye"
+                        data-bs-toggle="modal"
+                        data-bs-target="#WorkImgs"
+                      ></i
+                    ></span>
+                    <a
+                      class="pro-link"
+                      href="https://omokhtar407.github.io/Online-Tasks-User/"
+                      ><i class="fas fa-link"></i
+                    ></a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-3 col-md-6 mix app crud">
+                <div class="item-img" data-aos="fade-up">
+                  <img
+                    src="imgs/My_Works/work_16.png"
+                    class="inn-img img-fluid"
+                    alt="Sticky_Notes Image"
+                  />
+
+                  <div class="img-info">
+                    <span class="plus"
+                      ><i
+                        class="fas fa-eye"
+                        data-bs-toggle="modal"
+                        data-bs-target="#WorkImgs"
+                      ></i
+                    ></span>
+                    <a
+                      class="pro-link"
+                      href="https://omokhtar407.github.io/Online-Tasks-Admin/"
+                      ><i class="fas fa-link"></i
+                    ></a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-3 col-md-6 mix web">
+                <div class="item-img" data-aos="fade-up">
+                  <img
+                    src="imgs/My_Works/work_0.png"
+                    class="inn-img img-fluid"
+                    alt="Blood Bank"
+                  />
+
+                  <div class="img-info">
+                    <span class="plus"
+                      ><i
+                        class="fas fa-eye"
+                        data-bs-toggle="modal"
+                        data-bs-target="#WorkImgs"
+                      ></i
+                    ></span>
+                    <a class="pro-link" href="https://blood-bank.life/index.php"
+                      ><i class="fas fa-link"></i
+                    ></a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-3 col-md-6 mix web">
+                <div class="item-img" data-aos="fade-up">
+                  <img
+                    src="imgs/My_Works/work_3.png"
+                    class="inn-img img-fluid"
+                    alt="Angora Image"
+                  />
+
+                  <div class="img-info">
+                    <span class="plus"
+                      ><i
+                        class="fas fa-eye"
+                        data-bs-toggle="modal"
+                        data-bs-target="#WorkImgs"
+                      ></i
+                    ></span>
+                    <a
+                      class="pro-link"
+                      href="https://omokhtar407.github.io/Angora/"
+                      ><i class="fas fa-link"></i
+                    ></a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-3 col-md-6 mix app">
+                <div class="item-img" data-aos="fade-up">
+                  <img
+                    src="imgs/My_Works/work_4.png"
+                    class="inn-img img-fluid"
+                    alt="Weather Image"
+                  />
+
+                  <div class="img-info">
+                    <span class="plus"
+                      ><i
+                        class="fas fa-eye"
+                        data-bs-toggle="modal"
+                        data-bs-target="#WorkImgs"
+                      ></i
+                    ></span>
+                    <a
+                      class="pro-link"
+                      href="https://omokhtar407.github.io/Weather_App/"
+                      ><i class="fas fa-link"></i
+                    ></a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-3 col-md-6 mix web">
+                <div class="item-img" data-aos="fade-up">
+                  <img
+                    src="imgs/My_Works/work_9.png"
+                    class="inn-img img-fluid"
+                    alt="Devfolio Image"
+                  />
+
+                  <div class="img-info">
+                    <span class="plus"
+                      ><i
+                        class="fas fa-eye"
+                        data-bs-toggle="modal"
+                        data-bs-target="#WorkImgs"
+                      ></i
+                    ></span>
+                    <a
+                      class="pro-link"
+                      href="https://omokhtar407.github.io/Devfolio/"
+                      ><i class="fas fa-link"></i
+                    ></a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-3 col-md-4 mix web">
+                <div class="item-img" data-aos="fade-up">
+                  <img
+                    src="imgs/My_Works/work_7.png"
+                    class="inn-img img-fluid"
+                    alt="Mia_Italianno Image"
+                  />
+
+                  <div class="img-info">
+                    <span class="plus"
+                      ><i
+                        class="fas fa-eye"
+                        data-bs-toggle="modal"
+                        data-bs-target="#WorkImgs"
+                      ></i
+                    ></span>
+                    <a
+                      class="pro-link"
+                      href="https://omokhtar407.github.io/Mia_Italianno/"
+                      ><i class="fas fa-link"></i
+                    ></a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- <div class="col-lg-3 col-md-6 mix web">
                 <div
                 class="item-img"
                 data-aos="fade-up"
@@ -1330,20 +1260,18 @@
     </section>
     <!-- ----------------------------------- End My Works ------------------------------------->
 
-    <!-- ----------------------------------- Start Services ------------------------------------->
-    <section id="Services">
+    <!-- ----------------------------------- Start Contact ------------------------------------->
+    <section id="ContactMe" class="position-relative">
+      <div class="circle-1"></div>
+      <div class="circle-2"></div>
+      <div class="square-1"></div>
+      <div class="square-2"></div>
       <div class="container">
-        <div
-          class="Master_Head"
-          data-aos="fade-up"
-          data-aos-offset="200"
-          data-aos-duration="1000"
-          data-aos-anchor-placement="top-bottom"
-        >
+        <div class="Master_Head" data-aos="fade-up">
           <div class="head">
             <h2>
               My <br />
-              Services
+              Contact
             </h2>
             <div class="brd"></div>
           </div>
@@ -1351,112 +1279,121 @@
             <span>05</span>
           </div>
         </div>
-        <div class="row g-4 mt-4 justify-content-center">
-          <div class="col-lg-4 col-sm-6">
-            <div
-              class="service"
-              data-aos="fade-up"
-              data-aos-offset="100"
-              data-aos-duration="1000"
-              data-aos-anchor-placement="top-bottom"
-            >
-              <i class="far fa-code"></i>
-              <div class="ser-info">
-                <h5>Website Development</h5>
-                <small>12 Projects</small>
-              </div>
-            </div>
+        <div
+          class="row g-4 mt-4 justify-content-center align-items-center"
+          data-aos="fade-up"
+        >
+          <div class="col-12">
+            <h3>Need help? Contact Me Now!</h3>
+            <p>
+              Thank you for your interest. Please fill out the form and i will
+              get back to you promptly regarding your request.
+            </p>
           </div>
-
-          <div class="col-lg-4 col-sm-6">
-            <div
-              class="service"
-              data-aos="fade-up"
-              data-aos-offset="100"
-              data-aos-duration="1400"
-              data-aos-anchor-placement="top-bottom"
-            >
-              <i class="far fa-browser"></i>
-              <div class="ser-info">
-                <h5>Responsive Design</h5>
-                <small>11 Projects</small>
+          <div class="col-md-5">
+            <div class="contact-form">
+              <div class="form-group">
+                <input required="" class="input" type="text" id="name" />
+                <span class="highlight"></span>
+                <span class="bar"></span>
+                <label>Name</label>
+                <span class="validate">
+                  <i id="timesCircleName" class="fad fa-times-circle text-danger d-none" aria-hidden="true"></i>
+                  <i class="fad fa-check-circle text-success d-none" aria-hidden="true"></i>
+                </span>
               </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-sm-6">
-            <div
-              class="service"
-              data-aos="fade-up"
-              data-aos-offset="100"
-              data-aos-duration="1800"
-              data-aos-anchor-placement="top-bottom"
-            >
-              <i class="far fa-brackets"></i>
-              <div class="ser-info">
-                <h5>Clean Code</h5>
-                <small>8 Projects</small>
+              <div class="form-group">
+                <input required="" class="input" type="email" id="email" />
+                <span class="highlight"></span>
+                <span class="bar"></span>
+                <label>Email</label>
+                <span class="validate">
+                  <i id="timesCircleEmail" class="fad fa-times-circle text-danger d-none" aria-hidden="true"></i>
+                  <i class="fad fa-check-circle text-success d-none" aria-hidden="true"></i>
+                </span>
               </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-sm-6">
-            <div
-              class="service"
-              data-aos="fade-up"
-              data-aos-offset="100"
-              data-aos-duration="1000"
-              data-aos-anchor-placement="top-bottom"
-            >
-              <i class="far fa-shopping-cart"></i>
-              <div class="ser-info">
-                <h5>ECommerce Development</h5>
-                <small>1 Projects</small>
+              <div class="form-group">
+                <input required="" class="input" type="text" id="subject" />
+                <span class="highlight"></span>
+                <span class="bar"></span>
+                <label>Subject</label>
+                <span class="validate">
+                  <i id="timesCircleSub" class="fad fa-times-circle text-danger d-none" aria-hidden="true"></i>
+                  <i class="fad fa-check-circle text-success d-none" aria-hidden="true"></i>
+                </span>
               </div>
-              <!-- AOs plugin -->
-              <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-              <script>
-                AOS.init();
-              </script>
-              <!-- End -->
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-sm-6">
-            <div
-              class="service"
-              data-aos="fade-up"
-              data-aos-offset="100"
-              data-aos-duration="1400"
-              data-aos-anchor-placement="top-bottom"
-            >
-              <i class="far fa-user"></i>
-              <div class="ser-info">
-                <h5>User Experience</h5>
-                <small>5 Projects</small>
+              <div class="form-group">
+                <div class="form-group">
+                  <textarea
+                    required=""
+                    class="input"
+                    type="text"
+                    id="message"
+                    rows="2"
+                    cols="10"
+                  ></textarea>
+                  <span class="highlight"></span>
+                  <span class="bar"></span>
+                  <label>Message</label>
+                  <span class="validate">
+                  <i id="timesCircleMess" class="fad fa-times-circle text-danger d-none" aria-hidden="true"></i>
+                  <i class="fad fa-check-circle text-success d-none" aria-hidden="true"></i>
+                </span>
+                </div>
               </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-sm-6">
-            <div
-              class="service"
-              data-aos="fade-up"
-              data-aos-offset="100"
-              data-aos-duration="1800"
-              data-aos-anchor-placement="top-bottom"
-            >
-              <i class="far fa-palette"></i>
-              <div class="ser-info">
-                <h5>Website Designing</h5>
-                <small>1 Projects</small>
+              <div class="form-group">
+                <button id="send" class="button">
+                  Send Message
+                  <span></span>
+                </button>
               </div>
             </div>
           </div>
         </div>
       </div>
     </section>
-    <!-- ----------------------------------- End Services ------------------------------------->
+    <!-- ----------------------------------- End Contact ------------------------------------->
+
+    <!-- ----------------------------------- Start Footer ------------------------------------->
+    <footer>
+      <div class="logo">
+        <img src="imgs/logo.png" alt="logo" />
+      </div>
+      <ul class="social">
+        <li>
+          <a
+            href="https://www.facebook.com/profile.php?id=100028305347519"
+            target="_blank"
+          >
+            <img src="imgs/Web img_icons/facebook.png" alt="facebook.png" />
+          </a>
+        </li>
+        <li>
+          <a href="http://wa.me/+201145466042" target="_blank">
+            <img src="imgs/Web img_icons/whatsapp.png" alt="whatsapp.png" />
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://www.linkedin.com/in/omar-mokhtar-737536200"
+            target="_blank"
+            ><img src="imgs/Web img_icons/linkedin.png" alt="linkedin.png"
+          /></a>
+        </li>
+        <li>
+          <a href="mailto:omokhtar407@gmail.com" target="_blank"
+            ><img src="imgs/Web img_icons/gmail.png" alt="gmail.png"
+          /></a>
+        </li>
+        <li>
+          <a href="https://github.com/omokhtar407" target="_blank">
+            <img src="imgs/Web img_icons/gtihub.png" alt="gtihub.png" />
+          </a>
+        </li>
+      </ul>
+      <p>Omar Mokhtar&reg; Portfolio 2023</p>
+    </footer>
+    <!-- ----------------------------------- End Footer ------------------------------------->
 
     <!-- ----------------------------------- Start Btn_UP ----------------------------------- -->
     <a id="btnUp" type="button" role="button"
@@ -1467,6 +1404,7 @@
     <!-- ----------------------------------- Start Scripts ----------------------------------- -->
     <script src="js/jquery-3.6.0.min.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/sweetalert2.min.js"></script>
     <script src="js/main.js"></script>
 
     <!-- mixitup plugin -->
@@ -1484,17 +1422,21 @@
       $(document).ready(() => {
         var typed = new Typed(".typed", {
           strings: ["Front-End Developer", "Web Designer"],
-          typeSpeed: 60,
-          backSpeed: 60,
+          typeSpeed: 80,
+          backSpeed: 140,
           loop: true,
         });
       });
     </script>
+    <!-- AOs plugin -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
     <!-- End -->
-
-    <!-- Easy pie chart  -->
-    <script src="js/easypiechart.min.js"></script>
-    <!-- End  -->
+    <!-- Start Emailjs-->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <!-- End Emailjs-->
     <!-- ----------------------------------- End Scripts ----------------------------------- -->
   </body>
 </html>

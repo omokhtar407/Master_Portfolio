@@ -1,294 +1,262 @@
-/* ******************* Start Change website colors ****************** */
-/* For OptionsBox */
-// $('#toggleBtn').click(function(){
-//     let colorBoxWidth = $(".colors-box").innerWidth();
-
-//     if($('#optionsBox').css("left") == "0px"){
-//         $('#optionsBox').animate({left:`-${colorBoxWidth}`}, 1000);
-//     }
-//     else{
-//         $('#optionsBox').animate({left:`0px`}, 1000);
-//     }
-// })
-// let colorItem = $(".color-item");
-// colorItem.eq(0).css("backgroundColor" , "#f61d1d");
-// colorItem.eq(1).css("backgroundColor" , "#1976d2");
-// colorItem.eq(2).css("backgroundColor" , "#16A085");
-// colorItem.eq(3).css("backgroundColor" , "#2ECC71");
-
-
-// colorItem.click(function(e){
-//     let bgColor = $(e.target).css("backgroundColor");
-//     $("body").css({"--main_color" : bgColor,});
-// })
-/* End OptionsBox */
-
-
-/* ******************* End Change website colors ****************** */
-
-
-
 /* ******************* Start Loading ****************** */
-$(document).ready(function() {
-
-    /* for OptionsBox */
-    // let colorBoxWidth = $(".colors-box").innerWidth();
-    // $('#optionsBox').animate({left:`-${colorBoxWidth}`}, 0);
-    /* End OptionsBox */
-
-        $('.my-logo').fadeOut(2500, () => {
-            $('.my-logo').parent().fadeOut(3500, () => {
-                $('.loading').remove();
-                $('body').css("overflow-y", "auto");
-            })
-        });
-    })
-    /* ******************* End Loading ****************** */
+$(document).ready(function () {
+  $(".my-logo").fadeOut(2500, () => {
+    $(".my-logo")
+      .parent()
+      .fadeOut(3500, () => {
+        $(".loading").remove();
+        $("body").css("overflow-y", "auto");
+      });
+  });
+});
+/* ******************* End Loading ****************** */
 
 /* ****************** Start Header ****************** */
+let mainNavPhone = document.querySelector(".main-nav-phone");
+let menuIconBars = document.querySelector(".menu .fa-bars");
+let menuIconTimes = document.querySelector(".menu .fa-times");
+document.addEventListener("click", (e) => {
+  if (e.target.target == "_self" || e.target.classList.contains("fa-times")) {
+    mainNavPhone.style.transform = "translateY(-120%)";
+    menuIconBars.classList.remove("d-non");
+    menuIconTimes.classList.add("d-non");
+  } else if (e.target.classList.contains("fa-bars")) {
+    menuIconBars.classList.add("d-non");
+    mainNavPhone.style.transform = "translateY(0%)";
+    menuIconTimes.classList.remove("d-non");
+  }
+});
+/* ****************** End Header ****************** */
+/* ****** Start Main-Slider ****** */
+let SliderContent = document.querySelector(".slider_content");
 
-/* ****** Start Container ****** */
-let SliderContent = document.querySelector('.slider_content');
-
-window.addEventListener('scroll', () => {
-
-    SliderContent.style.opacity = 1 - +window.pageYOffset / 550 + '';
-    SliderContent.style.top = +window.pageYOffset + 'px';
-    SliderContent.style.backgroundPositionY = - +window.pageYOffset / 2 + 'px';
-
+window.addEventListener("scroll", () => {
+  SliderContent.style.opacity = 1 - +window.pageYOffset / 550 + "";
+  SliderContent.style.top = +window.pageYOffset + "px";
+  SliderContent.style.backgroundPositionY = -+window.pageYOffset / 2 + "px";
 });
 /* ****** End ****** */
 
 /* ****** Start My_sections ****** */
-$("a[href^= '#'] ").click(function(e) {
-        let aHref = e.target.getAttribute('href');
-        let secOffset = $(aHref).offset().top;
-        $('body,html').animate({ scrollTop: secOffset }, 1000);
-    })
-    /* ****** End ****** */
+$("a[href^= '#'] ").click(function (e) {
+  let aHref = e.target.getAttribute("href");
+  let secOffset = $(aHref).offset().top;
+  $("body,html").animate({ scrollTop: secOffset }, 1000);
+});
+/* ****** End ****** */
 
 /********* Start My_social *******/
-let My_social = document.querySelector('.My_social');
-My_social.addEventListener('click', function(e) {
-    e.currentTarget.classList.add('active');
-
-    if(e.target.hasAttribute('href') || e.target.classList.contains('fas')){
-        e.currentTarget.classList.remove('active');
-    }
+let My_social = document.querySelector(".My_social");
+My_social.addEventListener("click", function (e) {
+  e.currentTarget.classList.toggle("active");
 });
 
-window.addEventListener('scroll', function() {
-    if(My_social.classList.contains('active')){
-        My_social.classList.remove('active');
-    }
+document.addEventListener("click", (e) => {
+  if (e.target !== My_social) {
+    My_social.classList.remove("active");
+  }
 });
 
-/* ****** End ****** */
-/* ****************** End Header ****************** */
-
-
-
-/* ****************** Start My Skills ****************** */
-
-/* ****** Start Easy pie chart ****** */
-let SkillOff = Math.floor($('#Skills').offset().top);
-$(window).scroll(function() {
-
-    let wScroll = Math.floor($(window).scrollTop());
-
-    let html = document.querySelector('.html'),
-        css = document.querySelector('.css'),
-        js = document.querySelector('.js'),
-        ts = document.querySelector('.ts'),
-        Jquery = document.querySelector('.Jquery'),
-        bootstrab = document.querySelector('.bootstrab'),
-        Angular = document.querySelector('.Angular'),
-        Angular_Material = document.querySelector('.Angular_Material'),
-        sass = document.querySelector('.sass'),
-        Ajax_json = document.querySelector('.Ajax-json'),
-        github = document.querySelector('.github');
-
-    if (wScroll >= SkillOff) {
-
-        new EasyPieChart(html, {
-            barColor: '#fd7e14',
-            lineWidth: 10,
-            trackColor: '#000',
-            trackWidth: 10,
-            lineCap: 'round',
-        });
-
-        new EasyPieChart(css, {
-            barColor: '#0d6efd',
-            lineWidth: 10,
-            trackColor: '#000',
-            trackWidth: 10,
-            lineCap: 'round'
-        });
-
-        new EasyPieChart(js, {
-            barColor: '#ffc107',
-            lineWidth: 10,
-            trackColor: '#000',
-            trackWidth: 10,
-            lineCap: 'round'
-        });
-
-        new EasyPieChart(ts, {
-            barColor: '#0d60ff',
-            lineWidth: 10,
-            trackColor: '#000',
-            trackWidth: 10,
-            lineCap: 'round'
-        });
-
-        new EasyPieChart(Jquery, {
-            barColor: '#b3d4fc',
-            lineWidth: 10,
-            trackColor: '#000',
-            trackWidth: 10,
-            lineCap: 'round'
-        });
-
-        new EasyPieChart(bootstrab, {
-            barColor: '#6610f2',
-            lineWidth: 10,
-            trackColor: '#000',
-            trackWidth: 10,
-            lineCap: 'round'
-        });
-
-        new EasyPieChart(Angular, {
-            barColor: 'red',
-            lineWidth: 10,
-            trackColor: '#000',
-            trackWidth: 10,
-            lineCap: 'round'
-        });
-
-        new EasyPieChart(Angular_Material, {
-            barColor: '#3f51b5',
-            lineWidth: 10,
-            trackColor: '#000',
-            trackWidth: 10,
-            lineCap: 'round'
-        });
-
-        new EasyPieChart(sass, {
-            barColor: '#d63384',
-            lineWidth: 10,
-            trackColor: '#000',
-            trackWidth: 10,
-            lineCap: 'round'
-        });
-
-        new EasyPieChart(Ajax_json, {
-            barColor: '#198754',
-            lineWidth: 10,
-            trackColor: '#000',
-            trackWidth: 10,
-            lineCap: 'round'
-        });
-
-        new EasyPieChart(github, {
-            barColor: '#343a40',
-            lineWidth: 10,
-            trackColor: '#000',
-            trackWidth: 10,
-            lineCap: 'round'
-        });
-
-    }
+window.addEventListener("scroll", function () {
+  if (My_social.classList.contains("active")) {
+    My_social.classList.remove("active");
+  }
 });
 /* ****** End ****** */
-
-/* ****************** End My Skills ****************** */
-
-
 
 /* ****************** Start MY Works ****************** */
 
 /* ****** Start nav-pills  ****** */
-$('.nav-item').click(function() {
+$(".nav-item").click(function () {
+  $(this).find(".nav-link").addClass("active");
+  $(this).siblings().find(".nav-link").removeClass("active");
+});
+/* ****** End ****** */
 
-        $(this).find('.nav-link').addClass('active');
-        $(this).siblings().find('.nav-link').removeClass('active');
-
-    })
-    /* ****** End ****** */
-    /* ****** Start Img Slide  ****** */
-let imgs = Array.from(document.querySelectorAll('.inn-img'));
-let Plus = Array.from(document.querySelectorAll('.plus'));
-let SelectedImg = document.querySelector('#selectedImg');
-let prevButton = document.querySelector('.fa-angle-left');
-let nextButton = document.querySelector('.fa-angle-right');
-let closeButton = document.querySelector('.fa-times-square');
+/* ****** Start Img Slide  ****** */
+let imgs = Array.from(document.querySelectorAll(".inn-img"));
+let Plus = Array.from(document.querySelectorAll(".plus"));
+let SelectedImg = document.querySelector("#selectedImg");
+let prevButton = document.querySelector(".fa-angle-left");
+let nextButton = document.querySelector(".fa-angle-right");
+let closeButton = document.querySelector(".fa-times-square");
 
 let currentIndex = 0;
 
 for (let x = 0; x < Plus.length; x++) {
-    Plus[x].addEventListener('click', function() {
-        currentIndex = x;
-        let imgSrc = imgs[x].getAttribute('src');
-        SelectedImg.setAttribute('src', imgSrc);
-    })
+  Plus[x].addEventListener("click", function () {
+    currentIndex = x;
+    let imgSrc = imgs[x].getAttribute("src");
+    SelectedImg.setAttribute("src", imgSrc);
+  });
 }
 
 function slide(i) {
-    currentIndex = currentIndex + i;
+  currentIndex = currentIndex + i;
 
-    if (currentIndex == -1) {
-        currentIndex = imgs.length - 1;
-    }
-    if (currentIndex == imgs.length) {
-        currentIndex = 0;
-    }
-    let imgSrc = imgs[currentIndex].getAttribute('src');
-    SelectedImg.setAttribute('src', imgSrc);
+  if (currentIndex == -1) {
+    currentIndex = imgs.length - 1;
+  }
+  if (currentIndex == imgs.length) {
+    currentIndex = 0;
+  }
+  let imgSrc = imgs[currentIndex].getAttribute("src");
+  SelectedImg.setAttribute("src", imgSrc);
 }
 
 function closeSlider() {
-    document.querySelector('.modal').style.cssText = 'transform: translate(0,-50)';
-    document.querySelector('.modal-backdrop.show').remove();
-    document.body.style.cssText = 'overflow : auto !important';
+  document.querySelector(".modal").style.cssText =
+    "transform: translate(0,-50)";
+  document.querySelector(".modal-backdrop.show").remove();
+  document.body.style.cssText = "overflow : auto !important";
 }
 
-nextButton.addEventListener('click', function() {
+nextButton.addEventListener("click", function () {
+  slide(1);
+});
+
+prevButton.addEventListener("click", function () {
+  slide(-1);
+});
+
+document.addEventListener("keydown", function (e) {
+  if (e.key == "ArrowRight") {
     slide(1);
-});
-
-prevButton.addEventListener('click', function() {
+  } else if (e.key == "ArrowLeft") {
     slide(-1);
+  } else if (e.key == "Escape") {
+    closeSlider();
+  }
 });
-
-document.addEventListener('keydown', function(e) {
-        if (e.key == "ArrowRight") {
-            slide(1);
-        } else if (e.key == "ArrowLeft") {
-            slide(-1);
-        } else if (e.key == "Escape") {
-            closeSlider();
-        }
-    })
-    /* ****** End ****** */
+/* ****** End ****** */
 
 /* ******************* End MY Works ****************** */
 
 /* ******************* Start btnUp ****************** */
-let aboutOffset = $('#About_Me').offset().top;
-$(window).scroll(function() {
-    let wScroll = $(window).scrollTop();
-    if (wScroll > aboutOffset - 300) {
-        $('#btnUp').fadeIn(500);
-    } else {
-        $('#btnUp').fadeOut(500);
-    }
-})
-$('#btnUp').click(function() {
-        $('body,html').animate({ scrollTop: 0 }, 1000)
-    })
-    /* ******************* End btnUp ****************** */
+let aboutOffset = $("#About_Me").offset().top;
+$(window).scroll(function () {
+  let wScroll = $(window).scrollTop();
+  if (wScroll > aboutOffset - 300) {
+    $("#btnUp").fadeIn(500);
+  } else {
+    $("#btnUp").fadeOut(500);
+  }
+});
+$("#btnUp").click(function () {
+  $("body,html").animate({ scrollTop: 0 }, 1000);
+});
+/* ******************* End btnUp ****************** */
 
+/* ******************* Start Contact ME ****************** */
+let userNameInput = document.getElementById("name");
+let userEmailInput = document.getElementById("email");
+let userSubInput = document.getElementById("subject");
+let userMessageInput = document.getElementById("message");
+
+let timesIconName = document.getElementById("timesCircleName");
+let timesIconEmail = document.getElementById("timesCircleEmail");
+let timesIconSub = document.getElementById("timesCircleSub");
+let timesIconMess = document.getElementById("timesCircleMess");
+
+function validateName() {
+  let regexText = /^[a-zA-Z][a-zA-Z '.-]*[A-Za-z][^-]$/;
+  if (regexText.test(userNameInput.value) == true) {
+    timesIconName.nextElementSibling.classList.remove("d-none");
+    timesIconName.classList.add("d-none");
+    return true;
+  } else {
+    timesIconName.classList.remove("d-none");
+    timesIconName.nextElementSibling.classList.add("d-none");
+    return false;
+  }
+}
+function validateEmail() {
+  let regexEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+  if (regexEmail.test(userEmailInput.value) == true) {
+    timesIconEmail.nextElementSibling.classList.remove("d-none");
+    timesIconEmail.classList.add("d-none");
+    return true;
+  } else {
+    timesIconEmail.classList.remove("d-none");
+    timesIconEmail.nextElementSibling.classList.add("d-none");
+    return false;
+  }
+}
+function validateSub() {
+  let regexText = /^[a-zA-Z][a-zA-Z '.-]*[A-Za-z][^-]$/;
+  if (regexText.test(userSubInput.value) == true) {
+    timesIconSub.nextElementSibling.classList.remove("d-none");
+    timesIconSub.classList.add("d-none");
+    return true;
+  } else {
+    timesIconSub.classList.remove("d-none");
+    timesIconSub.nextElementSibling.classList.add("d-none");
+    return false;
+  }
+}
+function validateMessage() {
+  let regexMessage = /^([A-z ]{3,200})$/;
+  if (regexMessage.test(userMessageInput.value) == true) {
+    timesIconMess.nextElementSibling.classList.remove("d-none");
+    timesIconMess.classList.add("d-none");
+    return true;
+  } else {
+    timesIconMess.classList.remove("d-none");
+    timesIconMess.nextElementSibling.classList.add("d-none");
+    return false;
+  }
+}
+userNameInput.addEventListener("keyup", function () {
+  validateName();
+});
+userEmailInput.addEventListener("keyup", function () {
+  validateEmail();
+});
+userSubInput.addEventListener("keyup", function () {
+  validateSub();
+});
+userMessageInput.addEventListener("keyup", function () {
+  validateMessage();
+});
+document.getElementById("send").addEventListener("click", function () {
+  if (
+    validateName() == true &&
+    validateEmail() == true &&
+    validateSub() == true &&
+    validateMessage() == true
+  ) {
+    send();
+  }
+});
+
+function send() {
+  (function () {
+    emailjs.init("eLTrGnrMa7te4GHg0");
+  })();
+
+  let serviceId = "service_qptnh4u";
+  let templateId = "template_nnqslrf";
+
+  let params = {
+    sendername: document.querySelector("#name").value,
+    senderemail: document.querySelector("#email").value,
+    subject: document.querySelector("#subject").value,
+    message: document.querySelector("#message").value,
+  };
+
+  emailjs
+    .send(serviceId, templateId, params)
+    .then((res) => {
+        console.log(res)
+        Swal.fire({
+            icon: 'success',
+            title: 'Thanks! ' + params["sendername"] + ' for your interest'
+        })
+    })
+    .catch();
+}
+
+/* ******************* End Contact ME ****************** */
 /* ******************* Start lock inspect ****************** */
 
 // document.onkeydown = function(e) {
