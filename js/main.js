@@ -146,7 +146,6 @@ $("#btnUp").click(function () {
   $("body,html").animate({ scrollTop: 0 }, 1000);
 });
 /* ******************* End btnUp ****************** */
-
 /* ******************* Start Contact ME ****************** */
 let userNameInput = document.getElementById("name");
 let userEmailInput = document.getElementById("email");
@@ -157,6 +156,7 @@ let timesIconName = document.getElementById("timesCircleName");
 let timesIconEmail = document.getElementById("timesCircleEmail");
 let timesIconSub = document.getElementById("timesCircleSub");
 let timesIconMess = document.getElementById("timesCircleMess");
+let checkIcons = Array.from(document.querySelectorAll('.fa-check-circle'));
 
 function validateName() {
   let regexText = /^[a-zA-Z][a-zA-Z '.-]*[A-Za-z][^-]$/;
@@ -247,11 +247,18 @@ function send() {
   emailjs
     .send(serviceId, templateId, params)
     .then((res) => {
-        console.log(res)
+      
         Swal.fire({
             icon: 'success',
             title: 'Thanks! ' + params["sendername"] + ' for your interest'
-        })
+        });
+        userNameInput.value = '';
+        userEmailInput.value = '';
+        userSubInput.value = '';
+        userMessageInput.value = '';
+        for(let i = 0; i < checkIcons.length; i++) {
+          checkIcons[i].classList.add('d-none');
+        }
     })
     .catch();
 }

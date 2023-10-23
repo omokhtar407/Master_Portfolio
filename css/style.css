@@ -304,14 +304,14 @@ img {
   display: flex;
   backdrop-filter: blur(5px);
   background-color: #f67f1d14;
-  min-height: 70px;
+  min-height: 80px;
   align-items: center;
   justify-content: space-between;
   padding: 0 30px;
   z-index: 1300;
 }
 .logo img {
-  width: 60px;
+  width: 70px;
 }
 .main-nav {
   display: flex;
@@ -345,6 +345,7 @@ img {
 .contact .button:hover span::before {
   background: var(--main_color);
 }
+.menu i{font-size: 2.25rem;}
 .menu i.d-non {
   display: none;
 }
@@ -353,8 +354,8 @@ img {
 .main-nav-phone {
   position: fixed;
   inset: 0;
-  top: 70px;
-  height: calc(100vh - 70px);
+  top: 80px;
+  height: calc(100vh - 80px);
   background-color: var(--black_50_color);
   color: var(--white_color);
   z-index: 1200;
@@ -457,22 +458,24 @@ img {
   flex-direction: column;
   overflow: hidden;
 }
-
-/* Start  Ny_name */
-.My_name {
-  margin-top: 3rem;
+@media (max-width:567px) {
+  #Main_Slider {
+  top: 80px;
+  }
 }
+/* Start  Ny_name */
 .My_name > span,
-.My_name h1 {
+.My_name h2 {
   text-transform: uppercase;
 }
 .My_name > span,
 .My_name > p {
   color: var(--white_color);
 }
-.My_name h1 {
+.My_name h2 {
   color: var(--main_color);
   margin-bottom: 1rem;
+  height: 50px;
 }
 .My_name .button span::before {
   background: var(--black_color);
@@ -481,11 +484,8 @@ img {
   background: var(--main_color);
 }
 @media (max-width: 576px) {
-  .My_name h1 {
-    font-size: 1.8rem;
-  }
   .My_name h2 {
-    font-size: 1rem;
+    font-size: 1.6rem;
   }
 }
 /* End  Ny_name */
@@ -494,7 +494,7 @@ img {
 }
 .my-img img {
   transition: 0.4s;
-  width: 400px;
+  width: 350px;
 }
 @media (max-width: 767px) {
   .my-img,
@@ -502,7 +502,7 @@ img {
     text-align: center;
   }
   .my-img img {
-    width: 300px;
+    width: 250px;
     margin-top: 20px;
   }
 }
@@ -1251,6 +1251,7 @@ footer .social {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
   gap: 20px;
 }
 footer .social li a {
@@ -1276,6 +1277,7 @@ footer p {
   color: var(--white_color);
   font-size: 1.2rem;
   font-weight: 600;
+  text-align: center;
 }
 /* ************************ End Footer ************************/
 /*********************** Start Btn_Up ********************/
